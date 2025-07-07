@@ -1,12 +1,14 @@
-# Use official Maven image to build the application
-FROM maven:3.9.4-eclipse-temurin-17 AS build
-WORKDIR /app
-COPY . .
-RUN mvn clean package -DskipTests
+# Use a minimal Java runtime image
+FROM eclipse-temurin:17-jdk-alpine
 
-# Use a lighter JDK runtime image to run the app
-FROM eclipse-temurin:17-jdk
+# Set the working directory
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+
+# Copy the JAR file (adjust the name if different)
+COPY target/tabulaweb-1.0.6-SNAPSHOT.jar app.jar
+
+# Expose port 8080
 EXPOSE 8080
+
+# Run the Spring Boot app
 ENTRYPOINT ["java", "-jar", "app.jar"]
