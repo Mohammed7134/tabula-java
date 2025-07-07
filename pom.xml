@@ -249,7 +249,7 @@
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcmail-jdk18on</artifactId>
-            <version>1.80</version>
+            <version>1.81</version>
         </dependency>
 
         <dependency>
