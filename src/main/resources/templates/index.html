@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>PDF Table Extractor</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    </head>
+
+    <body>
+        <h1>Upload a PDF to Extract Table</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="file" accept="application/pdf" required />
+            <button type="submit">Upload</button>
+        </form>
+
+        <hr>
+
+        <div id="tableContainer"></div>
+
+        <script>
+            $('#uploadForm').on('submit', function (e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+                fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(res => res.text())
+                    .then(html => {
+                        $('#tableContainer').html(html);
+                        $('#extractedTable').DataTable();
+                    })
+                    .catch(err => alert("Error: " + err));
+            });
+        </script>
+    </body>
+
+</html>
