@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.tabulaweb"},{"l":"com.tabulaweb.controller"},{"l":"technology.tabula"},{"l":"technology.tabula.debug"},{"l":"technology.tabula.detectors"},{"l":"technology.tabula.extractors"},{"l":"technology.tabula.json"},{"l":"technology.tabula.writers"}];updateSearchResults();

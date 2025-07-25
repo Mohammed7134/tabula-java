@@ -9,4 +9,5 @@ public class TabulaWebApplication {
     public static void main(String[] args) {
         SpringApplication.run(TabulaWebApplication.class, args);
     }
+
 }

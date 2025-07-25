@@ -8,6 +8,6 @@ public class HomeController {
 
     @GetMapping("/")
     public String index() {
-        return "upload";        // looks for src/main/resources/templates/upload.html
+        return "index";        // looks for src/main/resources/templates/index.html
     }
 }

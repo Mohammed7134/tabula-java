@@ -4,6 +4,7 @@ com/tabulaweb/TabulaWebApplication.class
 technology/tabula/Utils$1.class
 technology/tabula/ProjectionProfile.class
 technology/tabula/json/RectangularTextContainerSerializer.class
+com/tabulaweb/pdf/AddGridToPDF.class
 technology/tabula/detectors/NurminenDetectionAlgorithm$RelevantEdges.class
 technology/tabula/Page$Builder.class
 technology/tabula/json/TableSerializer.class
@@ -69,6 +70,7 @@ technology/tabula/detectors/DetectionAlgorithm.class
 com/tabulaweb/controller/UploadController.class
 technology/tabula/extractors/BasicExtractionAlgorithm$1.class
 technology/tabula/CellPosition.class
+com/tabulaweb/utils/GridRunner.class
 technology/tabula/CommandLineApp$1.class
 technology/tabula/Cell.class
 technology/tabula/CommandLineApp$TableExtractor.class
