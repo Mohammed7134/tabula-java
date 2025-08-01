@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>PDF Table Extractor</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    </head>
+
+    <body>
+
+        <h1>Upload a PDF to Extract Table</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="files" accept="application/pdf" required multiple />
+            <button type="submit">Upload</button>
+        </form>
+
+        <hr>
+
+        <div id="tableContainer"></div>
+
+        <script>
+            var returnItems = []; //when processing detailed movement, this will hold return orders
+            var expiries = []; //when processing expiries, this will hold the extracted codes and dates
+            var movement = []; // to hold parsed data from the movement table
+            var invalidRows = []; // to hold rows that failed validation
+            var catalogue = []; // to hold the catalogue data
+            $('#uploadForm').on('submit', function (e) {
+                e.preventDefault();
+
+                // Get the file input named 'files' inside the form
+                const filesInput = $(this).find('input[name="files"]')[0];
+                if (!filesInput || filesInput.files.length === 0) {
+                    alert("Please select a file to upload.");
+                    return;
+                }
+
+                const files = filesInput.files; // ✅ Now we can use this safely throughout the function
+
+                // Find the 'expiries' file
+                const expiriesFile = Array.from(files).find(file => file.name.toLowerCase().includes("expiries"));
+                if (!expiriesFile) {
+                    alert("Expiries file not found.");
+                    return;
+                }
+
+                const formDataExpiries = new FormData();
+                formDataExpiries.append('file', expiriesFile);
+                formDataExpiries.append('fileTitle', expiriesFile.name.substring(0, expiriesFile.name.lastIndexOf('.')).toLowerCase());
+                fetch('/upload', {
+                    method: 'POST',
+                    body: formDataExpiries
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        $('#tableContainer').html(data.html);
+                        getExpiries();
+
+                        const detailed = Array.from(files).find(file => file.name.toLowerCase().includes("detailed"));
+                        if (!detailed) {
+                            alert("Detailed file not found.");
+                            return;
+                        }
+
+                        const formDataDetailed = new FormData();
+                        formDataDetailed.append('file', detailed);
+                        formDataDetailed.append('fileTitle', detailed.name.substring(0, detailed.name.lastIndexOf('.')).toLowerCase());
+
+                        return fetch('/upload', {
+                            method: 'POST',
+                            body: formDataDetailed
+                        })
+                            .then(res => res.json());
+                    })
+                    .then(data => {
+                        $('#tableContainer').html(data.html);
+
+                        returnItems = extractReturnOrders();
+
+                        const breif = Array.from(files).find(file => file.name.toLowerCase().includes("breif"));
+                        if (!breif) {
+                            alert("Breif file not found.");
+                            return;
+                        }
+
+                        const formDataBreif = new FormData();
+                        formDataBreif.append('file', breif);
+                        formDataBreif.append('fileTitle', breif.name.substring(0, breif.name.lastIndexOf('.')).toLowerCase());
+                        console.log(breif.name.substring(0, breif.name.lastIndexOf('.')).toLowerCase());
+
+                        return fetch('/upload', {
+                            method: 'POST',
+                            body: formDataBreif
+                        }).then(res => res.json());
+                    })
+                    .then(async (data) => {
+                        $('#tableContainer').html(data.html);
+                        if (!returnItems || returnItems.length === 0) {
+                            alert("No return orders found.");
+                            return;
+                        }
+
+                        deductReturnedMedicines();
+                        changeExpiries();
+                        parseTableWithValidation("extractedTable");
+                        await loadJSONCatalogue();
+                        writeTalabiya();
+                    })
+                    .catch(err => alert("Error: " + err));
+            });
+
+            function writeTalabiya() {
+                //loop over catalogue all items and update TOTAL based on movement
+                if (movement.length < 1) {
+                    alert("No movement data found.");
+                    return;
+                }
+                catalogueItems = catalogue.All || [];
+                if (catalogueItems.length < 1) {
+                    alert("No items found in catalogue.");
+                    return;
+                }
+                const specialCodes = ["6505-99-02-06542", "6505-99-02-06543", "6505-99-02-06544", "6505-99-02-06547", "6505-99-02-06534", "6505-99-02-06531", "6505-99-02-05571", "6505-99-02-05572"];
+
+                //loop over movement and search for matching item codes in catalogue, arrange them by pack size, then check if the difference divided by the pack size is more than 3 then set the total of this catalogue item to rounded absolute the difference divided by parsed pack size in case the difference is less than 0 and then ignore other pack sizes, and else if the number more than 3 then use the next pack size in catalogue
+                movement.forEach(m => {
+                    let matchingCatalogueItems = [];
+                    //convert drug code to 12 digits
+                    if (specialCodes.includes(m["DRUG CODE"])) {
+                        m["DRUG CODE"] = m["DRUG CODE"].replace(/^6505-99/, '6505-02')
+                            .replace(/-/g, '')
+                        matchingCatalogueItems = catalogueItems.filter(c => {
+                            const code = c["ITEMNO"].toString().padStart(12, '0');
+                            return code === m["DRUG CODE"];
+                        });
+                    } else {
+                        m["DRUG CODE"] = m["DRUG CODE"].replace(/^6505-99/, '6505-02')
+                            .replace(/-/g, '')
+                            .slice(0, 12);
+                        matchingCatalogueItems = catalogueItems.filter(c => {
+                            const code = c["ITEMNO"].toString().padStart(12, '0').slice(0, 12);
+                            return code === m["DRUG CODE"];
+                        });
+                    }
+                    if (matchingCatalogueItems.length > 0) {
+                        matchingCatalogueItems.sort((a, b) => {
+                            const packA = parseFloat(a["PACK"]) || 0;
+                            const packB = parseFloat(b["PACK"]) || 0;
+                            return packB - packA; // Sort in descending order
+                        });
+                    } else {
+                        console.warn(`No matching catalogue item found for code ${m["DRUG NAME"]}`);
+                        return; // Skip this movement if no matching catalogue item
+                    }
+                    //check if the difference divided by the pack size is more than 3 then set the total of this catalogue item to rounded absolute the difference divided by parsed pack size in case the difference is less than 0 and then ignore other pack sizes, and else if the number more than 3 then use the next pack size in catalogue
+                    for (const item of matchingCatalogueItems) {
+
+                        const packSize = parseFloat(item["PACK"]);
+                        if (isNaN(packSize) || packSize <= 0) {
+                            console.warn(`Invalid pack size for code ${item["ITEMNO"]}: ${packSize}`);
+                            return; // Skip this item if pack size is invalid
+                        }
+                        if (parseFloat(m.DIFFERENCE) < 0) {
+                            const total = Math.round(Math.abs(parseFloat(m.DIFFERENCE) || 0) / packSize);
+                            //change the item with the same code in catalogueItems
+                            catalogueItems.find(c => {
+
+                                if (c["ITEMNO"] === item["ITEMNO"]) {
+                                    if (item["IGNORE"] === true) {
+                                        c["TOTAL"] = "IGNORED"; // Mark as IGNORE if the item is marked as such
+                                        return; // Skip this item if it is marked as IGNORE
+                                    }
+
+                                    if (m["TOTAL"] === "DONE") {
+                                        c['TOTAL'] = m['TOTAL'];
+                                        return;
+                                    }
+                                    c["EXPIRY"] = m["Nearest Expire Date"] || "Not found"; // Use the nearest expiry date from movement
+                                    //if item expiry is at least after 4 months from today, set TOTAL to "we have enough"
+                                    const expiryDate = new Date(item["EXPIRY"]);
+                                    const today = new Date();
+                                    const fourMonthsFromNow = new Date(today.setMonth(today.getMonth() + 4));
+                                    if (c["EXPIRY"] != "Not Found" && expiryDate >= fourMonthsFromNow) {
+                                        if (total >= 3) {
+                                            c["TOTAL"] = total; // Set TOTAL to the total number of packs
+                                            m['TOTAL'] = "DONE"; // Exit the loop once we find a valid total
+                                        } else {
+                                            c["TOTAL"] = "UNFAVOURED"; // If total is less than 3, set TOTAL to "not enough"
+                                        }
+                                    }
+                                    ;
+                                }
+                            });
+
+                        } else {
+                            item["TOTAL"] = "NO NEED";
+                        }
+                    }
+                });
+
+                //hide the current table if it exists
+                const existingTable = document.getElementById("extractedTable");
+                if (existingTable) {
+                    existingTable.remove();
+                }
+                // Create a new table to display the catalogue
+                const table = document.createElement("table");
+                table.id = "catalogueTable";
+                table.className = "display";
+                const thead = document.createElement("thead");
+                const headerRow = document.createElement("tr");
+                const headers = ["STORE", "ITEMNO", "ITEMDESC", "EXPIRY", "PACK", "TOTAL"];
+                headers.forEach(headerText => {
+                    const th = document.createElement("th");
+                    th.textContent = headerText;
+                    headerRow.appendChild(th);
+                });
+                thead.appendChild(headerRow);
+                table.appendChild(thead);
+                const tbody = document.createElement("tbody");
+                catalogueItems.forEach(item => {
+                    item["STORE"] = item["ITEMNO"].toString().slice(6, 8);
+                    const row = document.createElement("tr");
+                    headers.forEach(header => {
+                        const cell = document.createElement("td");
+                        cell.textContent = item[header] || ""; // Use empty string if property doesn't exist
+                        row.appendChild(cell);
+                    });
+                    tbody.appendChild(row);
+                });
+                table.appendChild(tbody);
+                document.getElementById("tableContainer").appendChild(table);
+                // Initialize DataTable
+                $(document).ready(function () {
+                    $('#catalogueTable').DataTable({
+                        "paging": true,
+                        "searching": true,
+                        "ordering": true,
+                        "info": true,
+                        "lengthMenu": [2000, 100, 50, 25, 10],
+                        "pageLength": 10,
+                        "language": {
+                            "search": "Search Catalogue:",
+                            "lengthMenu": "Show _MENU_ entries",
+                            "info": "Showing _START_ to _END_ of _TOTAL_ entries",
+                            "infoEmpty": "No entries available",
+                            "infoFiltered": "(filtered from _MAX_ total entries)",
+                            "paginate": {
+                                "first": "First",
+                                "last": "Last",
+                                "next": "Next",
+                                "previous": "Previous"
+                            }
+                        }
+                    });
+                });
+            }
+            async function loadJSONCatalogue() {
+                await fetch('/data/catalogue.json')
+                    .then(res => res.json())
+                    .then(data => {
+                        catalogue = data;
+                    })
+                    .catch(err => console.error("Error loading JSON:", err));
+            }
+            function parseDateFromDDMMYYYY(text) {
+                const parts = text.split("/");
+                if (parts.length === 3) {
+                    const [day, month, year] = parts;
+                    const isoDate = `${year}-${month}-${day}`;
+                    const date = new Date(isoDate);
+                    return isNaN(date.getTime()) ? null : date;
+                }
+                return null;
+            }
+
+            function parseTableWithValidation(tableId) {
+                const table = document.getElementById(tableId);
+                const headers = Array.from(table.querySelectorAll("thead th")).map(th => th.innerText.trim());
+                const rows = Array.from(table.querySelectorAll("tbody tr"));
+
+                rows.forEach((row, rowIndex) => {
+                    const cells = Array.from(row.querySelectorAll("td"));
+                    const obj = {};
+                    let isValid = true;
+
+                    try {
+                        obj["DRUG CODE"] = cells[0]?.innerText.trim() || "";
+                        obj["DRUG NAME"] = cells[1]?.innerText.trim() || "";
+
+                        const stock = parseFloat(cells[2]?.innerText.trim());
+                        const totalOut = parseFloat(cells[3]?.innerText.trim());
+                        const difference = parseFloat(cells[4]?.innerText.trim());
+                        const dateText = cells[5]?.innerText.trim();
+                        const date = parseDateFromDDMMYYYY(dateText);
+
+                        if (isNaN(stock) || isNaN(totalOut) || isNaN(difference) || isNaN(date.getTime()) || !date) {
+                            isValid = false;
+                        }
+
+                        obj["CURRENT STOCK"] = stock;
+                        obj["TOTAL OUT"] = totalOut;
+                        obj["DIFFERENCE"] = difference;
+                        obj["Nearest Expire Date"] = date.toISOString().split("T")[0]; // format: yyyy-mm-dd
+
+                    } catch (err) {
+                        isValid = false;
+                    }
+
+                    if (isValid) {
+                        movement.push(obj);
+                    } else {
+                        if (obj["DRUG CODE"] != '' && obj["DRUG CODE"] != "DRUG CODE") {
+                            invalidRows.push({
+                                rowIndex: rowIndex + 1, // for user-friendly line numbers
+                                rawData: cells.map(cell => cell?.innerText.trim())
+                            });
+                        }
+                    }
+                });
+
+                return {
+                    parsed: movement,
+                    failed: invalidRows
+                };
+            }
+
+
+            const monthMap = {
+                JAN: "01", FEB: "02", MAR: "03", APR: "04", MAY: "05", JUN: "06",
+                JUL: "07", AUG: "08", SEP: "09", OCT: "10", NOV: "11", DEC: "12"
+            };
+
+            function convertDateFormat(dateStr) {
+                // Expecting format like: 01-JUL-26
+                const match = dateStr.match(/^(\d{2})-([A-Z]{3})-(\d{2})$/);
+                if (!match) return dateStr; // Return as-is if it doesn't match expected format
+
+                const [, day, monAbbrev, yearShort] = match;
+                const month = monthMap[monAbbrev.toUpperCase()] || "01";
+                const fullYear = parseInt(yearShort) < 50 ? `20${yearShort}` : `19${yearShort}`;
+
+                return `${day}/${month}/${fullYear}`;
+            }
+
+            function changeExpiries() {
+                const table = document.querySelector("table"); // adjust selector if needed
+                const rows = table.querySelectorAll("tbody tr");
+
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll("td");
+                    if (cells.length < 6) return; // skip if not enough columns
+
+                    const codeText = cells[0].textContent.trim(); // 1st column = code
+
+                    const match = expiries.find(update => update.code === codeText);
+                    if (match) {
+                        const formattedDate = convertDateFormat(match.date);
+                        cells[5].textContent = formattedDate; // 6th column = update expiry date
+                    }
+                });
+
+            }
+            function getExpiries() {
+                const rows = document.querySelectorAll("table tr");
+
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll("td");
+
+                    if (cells.length >= 3) {
+                        const code = cells[0].textContent.trim();
+                        const date = cells[2].textContent.trim();
+
+                        // Check if code matches pattern xxxx-xx-xx-xxxxx
+                        const codePattern = /\b\d{4}-\d{2}-\d{2}-\d{5}\b/;
+                        // Check if date matches pattern dd-MMM-yy
+                        const datePattern = /\b\d{2}-[A-Z]{3}-\d{2}\b/;
+
+                        const matchCode = code.match(codePattern);
+                        const matchDate = date.match(datePattern);
+                        if (matchCode && matchDate) {
+                            if (codePattern.test(matchCode[0]) && datePattern.test(matchDate[0])) {
+                                expiries.push({
+                                    code: matchCode[0],
+                                    date: matchDate[0]
+                                });
+                            }
+                        }
+                    }
+                });
+                console.log(expiries);
+            }
+            function deductReturnedMedicines() {
+                if (returnItems.length < 1) {
+                    alert("No return orders found.");
+                    return;
+                }
+                returnItems.forEach(update => {
+                    const rows = document.querySelectorAll("#extractedTable tbody tr");
+
+                    rows.forEach(row => {
+                        const nameCell = row.cells[1];
+                        const currentStockCell = row.cells[2];
+                        const totalOutCell = row.cells[3];
+                        const differenceCell = row.cells[4];
+
+                        if (nameCell.textContent.trim().toLowerCase().includes(update.name.toLowerCase())) {
+                            const currentStock = parseFloat(currentStockCell.textContent.trim()) || 0;
+                            const totalOut = parseFloat(totalOutCell.textContent.trim()) || 0;
+
+                            const newTotalOut = totalOut - parseFloat(update.quantity) || 0;
+                            const newDifference = currentStock - newTotalOut;
+
+                            totalOutCell.textContent = newTotalOut;
+                            differenceCell.textContent = newDifference;
+                        }
+                    });
+                });
+            }
+
+            function extractReturnOrders() {
+                const input = 'return order';
+                const rows = document.querySelectorAll("#extractedTable tbody tr");
+                const resultMap = {}; // Use object to group and sum by name
+
+                rows.forEach(row => {
+                    row.style.display = "";
+                    row.style.backgroundColor = "";
+                });
+
+                rows.forEach((row, index) => {
+                    const cells = Array.from(row.cells);
+                    const textMatch = cells.some(cell => cell.textContent.toLowerCase().includes(input));
+                    const outMatch = cells.some(cell => cell.textContent.includes("OUT")); // case-sensitive
+
+                    if (textMatch && outMatch) {
+                        let item2 = "";
+                        let item1 = "";
+
+                        // Get item2: value after 'return order'
+                        cells.forEach(cell => {
+                            const text = cell.textContent;
+                            const lowerText = text.toLowerCase();
+                            const pos = lowerText.indexOf(input);
+                            if (pos !== -1) {
+                                const afterText = text.substring(pos + input.length).trim();
+                                // Extract number (assumes number is first after the search text)
+                                const match = afterText.match(/[-+]?[0-9]*\.?[0-9]+/);
+                                if (match) {
+                                    item2 = parseFloat(match[0]);
+                                }
+                            }
+                        });
+
+                        row.style.backgroundColor = "lightgreen";
+
+                        // Get item1: value between 'item:' and 'Current Stock:'
+                        for (let i = index - 1; i >= 0; i--) {
+                            const tds = Array.from(rows[i].cells);
+                            for (const td of tds) {
+                                const tdText = td.textContent.trim();
+                                const lowerText = tdText.toLowerCase();
+
+                                if (lowerText.startsWith("item:")) {
+                                    const start = tdText.indexOf("item: ") + 7;
+                                    const end = tdText.indexOf("Current Stock:");
+                                    item1 = end !== -1
+                                        ? tdText.substring(start, end).trim()
+                                        : tdText.substring(start).trim();
+
+                                    rows[i].style.backgroundColor = "lightyellow";
+                                    break;
+                                }
+                            }
+                            if (item1) break;
+                        }
+
+                        // Add or accumulate in resultMap
+                        if (item1 && !isNaN(item2)) {
+                            if (!resultMap[item1]) {
+                                resultMap[item1] = {
+                                    name: item1,
+                                    quantity: 0
+                                };
+                            }
+                            resultMap[item1].quantity += item2;
+                        }
+                    }
+                });
+
+                // Convert map to array
+                const resultArray = Object.values(resultMap);
+                console.log(resultArray);
+                return resultArray;
+            }
+        </script>
+    </body>
+
+</html>
