@@ -2,18 +2,18 @@
 FROM maven:3.9.4-eclipse-temurin-17 AS build
 WORKDIR /app
 
-COPY pom.xml .
-COPY src ./src
+# Copy everything (src/, pom.xml, etc.)
+COPY . .
 
-# Package the application (skip tests if desired)
+# Build the JAR (skip tests optionally)
 RUN mvn clean package -DskipTests
 
-# Stage 2: Use the JAR in a lightweight runtime image
+# Stage 2: Run the app using a lighter image
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 
-# Copy the built JAR from the first stage
-COPY --from=build /app/target/tabulaweb-1.0.6-SNAPSHOT.jar app.jar
+# Copy the built JAR from stage 1
+COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
