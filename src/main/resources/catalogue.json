@@ -9411,7 +9411,7 @@
     "ITEMDESC": "M.M.R. VACC. 1 DOSE + DILU-MSD-10VIL",
     "PACK": "10",
     "UNIT": "PKT",
-    "IGNORE": true
+    "IGNORE": false
   },
   {
     "NO.": "1178",
@@ -9419,7 +9419,7 @@
     "ITEMDESC": "M.M.R. VACCINE 1 DOSE + DIL.  MSD 480VIL",
     "PACK": "480",
     "UNIT": "CRT",
-    "IGNORE": true
+    "IGNORE": false
   },
   {
     "NO.": "1179",
@@ -9427,7 +9427,7 @@
     "ITEMDESC": "M.M.R. VACCINE 1 DOSE + DILUENT",
     "PACK": "1",
     "UNIT": "VIL",
-    "IGNORE": true
+    "IGNORE": false
   },
   {
     "NO.": "1180",
@@ -9435,7 +9435,7 @@
     "ITEMDESC": "M.M.R. VACCINE 1 DOSE + DILUENT   10 VIL",
     "PACK": "10",
     "UNIT": "PKT",
-    "IGNORE": true
+    "IGNORE": false
   },
   {
     "NO.": "1181",
@@ -9443,7 +9443,7 @@
     "ITEMDESC": "M.M.R. VACCINE 1 DOSE + DILUENT  100 VIL",
     "PACK": "100",
     "UNIT": "PKT",
-    "IGNORE": true
+    "IGNORE": false
   },
   {
     "NO.": "1182",
@@ -9451,7 +9451,7 @@
     "ITEMDESC": "M.M.R. VACCINE 1 DOSE + DILUENT  600 VIL",
     "PACK": "600",
     "UNIT": "CRT",
-    "IGNORE": true
+    "IGNORE": false
   },
   {
     "NO.": "1183",
