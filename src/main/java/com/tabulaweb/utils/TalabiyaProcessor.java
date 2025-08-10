@@ -68,11 +68,11 @@ public class TalabiyaProcessor {
                     if (difference < 0) {
                         int total = (int) Math.round(Math.abs(difference) / packSize);
                         if (Boolean.TRUE.equals(item.getIGNORE())) {
-                            item.setTOTAL("IGNORED");
+                            item.setTOTAL("IG");
                             continue;
                         }
                         if (m.isDone()) {
-                            item.setTOTAL("DONE");
+                            item.setTOTAL("DN");
                             continue;
                         }
                         item.setEXPIRY(m.getExpiry());
@@ -83,15 +83,14 @@ public class TalabiyaProcessor {
                                 System.out.println("total already set to " + total + " for item: " + item.getITEMNO());
                                 m.setDone(true);
                             } else {
-                                item.setTOTAL("UNFAVOURED");
-                                m.setDone(true);
+                                item.setTOTAL("UF");
                             }
                         } else {
-                            item.setTOTAL("near expiry");
+                            item.setTOTAL("NE");
 
                         }
                     } else {
-                        item.setTOTAL("NO NEED");
+                        item.setTOTAL("NN");
                     }
                 }
             } else {
