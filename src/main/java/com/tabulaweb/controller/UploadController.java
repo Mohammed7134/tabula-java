@@ -50,7 +50,11 @@ public class UploadController {
         html.append("<tr>");
         String[] headers = {"STORE", "ITEMNO", "ITEMDESC", "EXPIRY", "PACK", "TOTAL"};
         for (String header : headers) {
-            html.append("<th>").append(header).append("</th>");
+                html.append("<th");
+                if ("PACK".equals(header)) {
+                        html.append(" style='padding:0 2rem;'");
+                }
+                html.append(">").append(header).append("</th>");
         }
         html.append("</tr>");
         html.append("</thead>");
@@ -69,7 +73,7 @@ public class UploadController {
             html.append("<td>").append(item.getITEMNO() != null ? item.getITEMNO() : "").append("</td>");
             html.append("<td>").append(item.getITEMDESC() != null ? item.getITEMDESC() : "").append("</td>");
             html.append("<td>").append(item.getEXPIRY() != null ? item.getEXPIRY() : "").append("</td>");
-            html.append("<td>").append(item.getPACK() != null ? item.getPACK() : "").append("</td>");
+            html.append("<td style='padding:0 2rem;'>").append(item.getPACK() != null ? item.getPACK() : "").append("</td>");
             html.append("<td>").append(item.getTOTAL() != null ? item.getTOTAL() : "").append("</td>");
             html.append("</tr>");
         }

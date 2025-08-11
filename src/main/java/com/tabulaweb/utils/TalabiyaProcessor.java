@@ -86,7 +86,7 @@ public class TalabiyaProcessor {
                                 item.setTOTAL("--- [UF]");
                             }
                         } else {
-                            item.setTOTAL("[   ] [NE]");
+                            item.setTOTAL("[.....] [NE]");
 
                         }
                     } else {
@@ -116,7 +116,7 @@ public class TalabiyaProcessor {
                     } else {
                         if (!item.getIGNORE()) {
                             System.out.println("No expiry found for code: " + code);
-                            item.setTOTAL("[   ] [N/A]");
+                            item.setTOTAL("[.....][N/A]");
                         } else {
                             item.setTOTAL("--- [IG]");
                         }
