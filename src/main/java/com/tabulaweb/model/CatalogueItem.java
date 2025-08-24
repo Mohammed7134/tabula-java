@@ -1,11 +1,9 @@
-// === CatalogueItem.java ===
 package com.tabulaweb.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-
 public class CatalogueItem {
 
     @JsonProperty("ITEMNO")
@@ -21,53 +19,38 @@ public class CatalogueItem {
     @JsonProperty("ITEMDESC")
     private String ITEMDESC;
 
-    public String getITEMNO() {
-        return ITEMNO;
-    }
+    // --- extra field not in JSON ---
+    private String NOTE;
+    private double STOCK;
+    private double MOVEMENT;
+    // getters and setters
+    public String getITEMNO() { return ITEMNO; }
+    public void setITEMNO(String ITEMNO) { this.ITEMNO = ITEMNO; }
 
-    public void setITEMNO(String ITEMNO) {
-        this.ITEMNO = ITEMNO;
-    }
+    public String getITEMDESC() { return ITEMDESC; }
+    public void setITEMDESC(String ITEMDESC) { this.ITEMDESC = ITEMDESC; }
 
-    public String getITEMDESC() {
-        return ITEMDESC;
-    }
+    public String getPACK() { return PACK; }
+    public void setPACK(String PACK) { this.PACK = PACK; }
 
-    public void setITEMDESC(String ITEMDESC) {
-        this.ITEMDESC = ITEMDESC;
-    }
+    public String getEXPIRY() { return EXPIRY; }
+    public void setEXPIRY(String EXPIRY) { this.EXPIRY = EXPIRY; }
 
-    public String getPACK() {
-        return PACK;
-    }
+    public String getTOTAL() { return TOTAL; }
+    public void setTOTAL(String TOTAL) { this.TOTAL = TOTAL; }
 
-    public void setPACK(String PACK) {
-        this.PACK = PACK;
-    }
+    public Boolean getIGNORE() { return IGNORE; }
+    public void setIGNORE(Boolean IGNORE) { this.IGNORE = IGNORE; }
 
-    public String getEXPIRY() {
-        return EXPIRY;
-    }
+    // new field getter/setter
+    public String getNOTE() { return NOTE; }
+    public void setNOTE(String NOTE) { this.NOTE = NOTE; }
 
-    public void setEXPIRY(String EXPIRY) {
-        this.EXPIRY = EXPIRY;
-    }
+    public double getSTOCK() { return STOCK; }
+    public void setSTOCK(double STOCK) { this.STOCK = STOCK; }
 
-    public String getTOTAL() {
-        return TOTAL;
-    }
-
-    public void setTOTAL(String TOTAL) {
-        this.TOTAL = TOTAL;
-    }
-
-    public Boolean getIGNORE() {
-        return IGNORE;
-    }
-
-    public void setIGNORE(Boolean IGNORE) {
-        this.IGNORE = IGNORE;
-    }
+    public double getMOVEMENT() { return MOVEMENT; }
+    public void setMOVEMENT(double MOVEMENT) { this.MOVEMENT = MOVEMENT; }
 
     @Override
     public String toString() {
@@ -77,6 +60,8 @@ public class CatalogueItem {
                 + ", EXPIRY='" + EXPIRY + '\''
                 + ", TOTAL='" + TOTAL + '\''
                 + ", IGNORE=" + IGNORE
+                + ", ITEMDESC='" + ITEMDESC + '\''
+                + ", NOTE='" + NOTE + '\''
                 + '}';
     }
 }

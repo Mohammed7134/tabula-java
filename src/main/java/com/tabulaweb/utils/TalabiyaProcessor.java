@@ -16,7 +16,7 @@ public class TalabiyaProcessor {
     private static final Set<String> specialCodes = Set.of(
             "6505-99-02-06542", "6505-99-02-06543", "6505-99-02-06546",
             "6505-99-02-06547", "6505-99-02-06534", "6505-99-02-06531",
-            "6505-99-02-05571", "6505-99-02-05572", "6505-99-02-05591", "6505-99-02-06545"
+            "6505-99-02-05571", "6505-99-02-05572", "6505-99-02-05591", "6505-99-02-06545", "6505-99-02-08062", "6505-99-02-08065"
     );
 
     public static List<CatalogueItem> writeTalabiya(List<BreifItem> breifItems, List<Expiry> expiries) {
@@ -36,7 +36,7 @@ public class TalabiyaProcessor {
         // Process each breif item
         for (BreifItem m : breifItems) {
             String code = m.getCode();
-            String finalCode = formateCode(code);
+            String finalCode = formatCode(code);
             if (finalCode != null
                     && finalCode.matches("\\d{12,13}") // must be 12 or 13 digits
                     && finalCode.startsWith("6505")) {
@@ -63,34 +63,42 @@ public class TalabiyaProcessor {
                     if (packSize <= 0) {
                         continue;
                     }
+                    item.setEXPIRY(m.getExpiry());
+                    LocalDate expiryDate = parseDate(item.getEXPIRY());
                     double difference = m.getDifference();
                     System.out.println("Processing item: " + item.getITEMNO() + ", difference: " + difference);
                     if (difference < 0) {
                         int total = (int) Math.round(Math.abs(difference) / packSize);
                         if (Boolean.TRUE.equals(item.getIGNORE())) {
-                            item.setTOTAL("--- [IG]");
+                            item.setTOTAL("-----");
+                            item.setNOTE("[IG]");
                             continue;
                         }
                         if (m.isDone()) {
-                            item.setTOTAL("--- [DN]");
+                            item.setTOTAL("-----");
+                            item.setNOTE("[DN]");
                             continue;
                         }
-                        item.setEXPIRY(m.getExpiry());
-                        LocalDate expiryDate = parseDate(item.getEXPIRY());
-                        if (expiryDate != null && expiryDate.isAfter(LocalDate.now().plusMonths(4))) {
+                        if (expiryDate != null && expiryDate.isAfter(LocalDate.now().plusMonths(6))) {
                             if (total >= 3) {
                                 item.setTOTAL(String.valueOf(total));
                                 System.out.println("total already set to " + total + " for item: " + item.getITEMNO());
                                 m.setDone(true);
                             } else {
-                                item.setTOTAL("--- [UF]");
+                                item.setTOTAL("-----");
+                                item.setNOTE("[UF]");
+
                             }
                         } else {
-                            item.setTOTAL("[.....] [NE]");
+                            item.setTOTAL("[........]");
+                            item.setNOTE("[NE]");
+
 
                         }
                     } else {
-                        item.setTOTAL("--- [NN]");
+                        item.setTOTAL("-----");
+                        item.setNOTE("[NN]");
+
                     }
                 }
             } else {
@@ -104,21 +112,23 @@ public class TalabiyaProcessor {
                 if (code != null && !code.isEmpty()) {
                     Expiry expiry = expiries.stream()
                             .filter(e -> {
-                                String finalCode = formateCode(e.getCode());
+                                String finalCode = formatCode(e.getCode());
                                 return code.contains(finalCode);
                             })
                             .findFirst()
                             .orElse(null);
                     if (expiry != null) {
                         item.setEXPIRY(UpdateExpiryDate.convertDateFormat(expiry.getDate()));
-                        item.setTOTAL("--- [NM]");
-
+                        item.setTOTAL("-----");
+                        item.setNOTE("[NM]");
                     } else {
                         if (!item.getIGNORE()) {
                             System.out.println("No expiry found for code: " + code);
-                            item.setTOTAL("[.....][N/A]");
+                            item.setTOTAL("[........]");
+                            item.setNOTE("[N/A]");
                         } else {
-                            item.setTOTAL("--- [IG]");
+                            item.setTOTAL("-----");
+                            item.setNOTE("[IG]");
                         }
 
                     }
@@ -147,7 +157,7 @@ public class TalabiyaProcessor {
         }
     }
 
-    private static String formateCode(String code) {
+    private static String formatCode(String code) {
         if (specialCodes.contains(code)) {
             code = code.replaceFirst("6505-99", "6505-02").replace("-", "");
             System.out.println("ITEMNO: " + code + " is a special code, formatted to: " + code);

@@ -2563,7 +2563,7 @@
     "ITEMDESC": "DISTILLED WATER 1000ML",
     "PACK": "1",
     "UNIT": "BAG",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "322",
@@ -2571,7 +2571,7 @@
     "ITEMDESC": "DISTILLED WATER 1000ML              10BG",
     "PACK": "10",
     "UNIT": "CRT",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "323",
@@ -2579,7 +2579,7 @@
     "ITEMDESC": "DISTILLED WATER 100ML",
     "PACK": "1",
     "UNIT": "BOT",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "324",
@@ -2587,7 +2587,7 @@
     "ITEMDESC": "DISTILLED WATER 100ML              48BOT",
     "PACK": "48",
     "UNIT": "CRT",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "325",
@@ -2595,7 +2595,7 @@
     "ITEMDESC": "DISTILLED WATER 100ML              50BOT",
     "PACK": "50",
     "UNIT": "CRT",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "326",
@@ -2603,7 +2603,7 @@
     "ITEMDESC": "DISTILLED WATER 100ML              6 BT",
     "PACK": "6",
     "UNIT": "PKT",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "327",
@@ -2611,7 +2611,7 @@
     "ITEMDESC": "DISTILLED WATER 100ML             20 BOT",
     "PACK": "20",
     "UNIT": "PKT",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "328",
@@ -2619,7 +2619,7 @@
     "ITEMDESC": "DISTILLED WATER 100ML             36 BT",
     "PACK": "36",
     "UNIT": "CRT",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "329",
@@ -2627,7 +2627,7 @@
     "ITEMDESC": "DISTILLED WATER 100ML            160 BT",
     "PACK": "160",
     "UNIT": "CRT",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "330",
@@ -3683,7 +3683,7 @@
     "ITEMDESC": "HAEMOCOMPLETTAN P 1G/100ML (COLD)   1BOT",
     "PACK": "1",
     "UNIT": "BOT",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "462",
@@ -4499,7 +4499,7 @@
     "ITEMDESC": "INSULIN PEN NEEDLE 31G(6MM)      6000PCS",
     "PACK": "6000",
     "UNIT": "BOX",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "564",
@@ -4507,7 +4507,7 @@
     "ITEMDESC": "INSUPEN NEEDLE 6MM               1200PCS",
     "PACK": "1200",
     "UNIT": "CRT",
-    "IGNORE": false
+    "IGNORE": true
   },
   {
     "NO.": "565",
@@ -9083,7 +9083,7 @@
     "ITEMDESC": "ZARZIO  0.3MG / 1ML               5 VIL",
     "PACK": "5",
     "UNIT": "PKT",
-    "IGNORE": true
+    "IGNORE": false
   },
   {
     "NO.": "1137",
