@@ -18,6 +18,8 @@ public class CatalogueItem {
     private Boolean IGNORE;
     @JsonProperty("ITEMDESC")
     private String ITEMDESC;
+    @JsonProperty("CARTON")
+    private String CARTON;
 
     // --- extra field not in JSON ---
     private String NOTE;
@@ -38,6 +40,9 @@ public class CatalogueItem {
 
     public String getTOTAL() { return TOTAL; }
     public void setTOTAL(String TOTAL) { this.TOTAL = TOTAL; }
+
+    public String getCARTON() { return CARTON; }
+    public void setCARTON(String CARTON) { this.CARTON = CARTON; }
 
     public Boolean getIGNORE() { return IGNORE; }
     public void setIGNORE(Boolean IGNORE) { this.IGNORE = IGNORE; }
