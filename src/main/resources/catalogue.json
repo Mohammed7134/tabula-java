@@ -11077,5 +11077,14 @@
     "UNIT": "PKT",
     "IGNORE": false,
     "CARTON": 10
+  },
+  {
+    "NO.": 1232,
+    "ITEMNO": 6505020202121,
+    "ITEMDESC": "PRALUENT 300MG/2ML (SANOFI)         1 PEN",
+    "PACK": 1,
+    "UNIT": "PKT",
+    "IGNORE": false,
+    "CARTON": 1
   }
 ]
