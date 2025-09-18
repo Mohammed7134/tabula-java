@@ -81,9 +81,14 @@ public class TalabiyaProcessor {
                         }
                         if (expiryDate != null && expiryDate.isAfter(LocalDate.now().plusMonths(6))) {
                             if (total >= 3) {
-                                item.setTOTAL(String.valueOf(total));
-                                System.out.println("total already set to " + total + " for item: " + item.getITEMNO());
-                                m.setDone(true);
+                                if (m.getCurrentStock()/m.getTotalOut() > 0.9) {
+                                    item.setTOTAL(String.valueOf(total));
+                                    System.out.println("total already set to " + total + " for item: " + item.getITEMNO());
+                                    m.setDone(true);
+                                } else {
+                                    item.setTOTAL("-----");
+                                    item.setNOTE("[NN]");
+                                }
                             } else {
                                 item.setTOTAL("-----");
                                 item.setNOTE("[UF]");
@@ -98,7 +103,6 @@ public class TalabiyaProcessor {
                     } else {
                         item.setTOTAL("-----");
                         item.setNOTE("[NN]");
-
                     }
                 }
             } else {

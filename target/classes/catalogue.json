@@ -11086,5 +11086,23 @@
     "UNIT": "PKT",
     "IGNORE": false,
     "CARTON": 1
+  },
+  {
+    "NO.": 1233,
+    "ITEMNO": 6505020212342,
+    "ITEMDESC": "HYACYST 120MG/50ML             1 PFS",
+    "PACK": 1,
+    "UNIT": "PKT",
+    "IGNORE": false,
+    "CARTON": 1
+  },
+  {
+    "NO.": 1234,
+    "ITEMNO": 6505020203002,
+    "ITEMDESC": "RISANKIZUMAB 150MG(SKYRIZI)        1 PFS",
+    "PACK": 1,
+    "UNIT": "PFS",
+    "IGNORE": true,
+    "CARTON": 1
   }
 ]
