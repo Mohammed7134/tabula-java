@@ -11104,5 +11104,14 @@
     "UNIT": "PFS",
     "IGNORE": true,
     "CARTON": 1
+  },
+  {
+    "NO.": 1235,
+    "ITEMNO": 6505020244551,
+    "ITEMDESC": "REZZAYO 200MG        1VIL",
+    "PACK": 1,
+    "UNIT": "VIL",
+    "IGNORE": false,
+    "CARTON": 1
   }
 ]
