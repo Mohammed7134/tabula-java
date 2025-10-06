@@ -81,7 +81,7 @@ public class TalabiyaProcessor {
                         }
                         if (expiryDate != null && expiryDate.isAfter(LocalDate.now().plusMonths(6))) {
                             if (total >= 3) {
-                                if (m.getCurrentStock()/m.getTotalOut() > 0.9) {
+                                if (m.getCurrentStock()/m.getTotalOut() < 0.9) {
                                     item.setTOTAL(String.valueOf(total));
                                     System.out.println("total already set to " + total + " for item: " + item.getITEMNO());
                                     m.setDone(true);
