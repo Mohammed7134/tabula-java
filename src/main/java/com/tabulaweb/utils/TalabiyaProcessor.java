@@ -141,6 +141,7 @@ public class TalabiyaProcessor {
                 }
             }
         }
+        CatalogueSorter.sortCatalogue(catalogueItems);
         return catalogueItems;
     }
 
@@ -174,4 +175,5 @@ public class TalabiyaProcessor {
         }
         return code;
     }
+    
 }

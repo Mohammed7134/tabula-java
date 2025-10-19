@@ -1,15 +1,17 @@
 package com.tabulaweb.utils;
 
-import java.util.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import com.tabulaweb.model.BreifItem;
 import com.tabulaweb.model.CatalogueItem;
 import com.tabulaweb.model.Expiry;
 import com.tabulaweb.model.RequestedItem;
-
 
 public class TalabiyaChecker {
 
@@ -257,8 +259,8 @@ public class TalabiyaChecker {
                     return result.stream();
                 })
                 .collect(Collectors.toList());
-
-
+        
+        CatalogueSorter.sortCatalogue(catalogueItems);
         return catalogueItems;
     }
     private static double parseDoubleSafe(String val) {
