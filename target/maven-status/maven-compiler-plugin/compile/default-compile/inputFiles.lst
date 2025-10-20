@@ -2,15 +2,15 @@
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/controller/HomeController.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/controller/UploadController.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/controller/UploadPDFController.java
-/Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/model/BreifItem.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/model/CatalogueItem.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/model/Expiry.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/model/RequestedItem.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/model/ReturnedItem.java
-/Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/parser/BreifParser.java
+/Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/model/briefItem.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/parser/DetailedParser.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/parser/ExpiryParser.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/parser/RequestedParser.java
+/Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/parser/briefParser.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/pdf/AddGridToPDF.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/utils/CatalogueLoader.java
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/com/tabulaweb/utils/CatalogueSorter.java

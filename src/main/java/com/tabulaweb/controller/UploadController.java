@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.tabulaweb.model.BreifItem;
+import com.tabulaweb.model.briefItem;
 import com.tabulaweb.model.CatalogueItem;
 import com.tabulaweb.model.Expiry;
 import com.tabulaweb.model.RequestedItem;
 import com.tabulaweb.model.ReturnedItem;
-import com.tabulaweb.parser.BreifParser;
+import com.tabulaweb.parser.briefParser;
 import com.tabulaweb.parser.DetailedParser;
 import com.tabulaweb.parser.ExpiryParser;
 import com.tabulaweb.parser.RequestedParser;
@@ -34,21 +34,21 @@ public class UploadController {
     public ResponseEntity<Map<String, String>> handleUploadprocessAll(
             @RequestParam("expiries") MultipartFile expiries,
             @RequestParam("detailed") MultipartFile detailed,
-            @RequestParam("breif") MultipartFile breif,
+            @RequestParam("brief") MultipartFile brief,
             @RequestParam(value = "requested", required = false) MultipartFile requested
     ) throws Exception {
         List<Expiry> expiryList = ExpiryParser.parseExpiries(expiries.getInputStream());
         List<ReturnedItem> returnedItems = DetailedParser.parseDetailed(detailed.getInputStream());
-        List<BreifItem> breifItems = BreifParser.parseBreif(breif.getInputStream());
-        breifItems = DeductReturned.deductReturnedMedicines(returnedItems, breifItems);
-        breifItems = UpdateExpiryDate.updateExpiryDates(breifItems, expiryList);
+        List<briefItem> briefItems = briefParser.parsebrief(brief.getInputStream());
+        briefItems = DeductReturned.deductReturnedMedicines(returnedItems, briefItems);
+        briefItems = UpdateExpiryDate.updateExpiryDates(briefItems, expiryList);
         StringBuilder html = new StringBuilder();
         List<CatalogueItem> catalogueItems;
         if (requested == null || requested.isEmpty()) {
-                catalogueItems = TalabiyaProcessor.writeTalabiya(breifItems, expiryList);
+                catalogueItems = TalabiyaProcessor.writeTalabiya(briefItems, expiryList);
         } else {
                 List<RequestedItem> requestedItems = RequestedParser.parseRequested(requested.getInputStream());
-                catalogueItems = TalabiyaChecker.checkTalabiya(breifItems, expiryList, requestedItems);
+                catalogueItems = TalabiyaChecker.checkTalabiya(briefItems, expiryList, requestedItems);
         }
                 System.out.println("Processed " + catalogueItems.size() + " catalogue items.");
 

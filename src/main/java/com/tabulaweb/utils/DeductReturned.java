@@ -2,22 +2,22 @@ package com.tabulaweb.utils;
 
 import java.util.List;
 
-import com.tabulaweb.model.BreifItem;
+import com.tabulaweb.model.briefItem;
 import com.tabulaweb.model.ReturnedItem;
 
 public class DeductReturned {
 
-    // Returns the updated list of BreifItems after deduction
-    public static List<BreifItem> deductReturnedMedicines(List<ReturnedItem> returnItems, List<BreifItem> breifItems) {
+    // Returns the updated list of briefItems after deduction
+    public static List<briefItem> deductReturnedMedicines(List<ReturnedItem> returnItems, List<briefItem> briefItems) {
         if (returnItems == null || returnItems.isEmpty()) {
             System.out.println("No return orders found.");
-            return breifItems;
+            return briefItems;
         }
 
         for (ReturnedItem update : returnItems) {
             String updateNameLower = update.getCode().toLowerCase(); // or getName() if you have name field
 
-            for (BreifItem row : breifItems) {
+            for (briefItem row : briefItems) {
                 String nameLower = row.getName() != null ? row.getName().toLowerCase() : "";
 
                 if (nameLower.contains(updateNameLower)) {
@@ -41,6 +41,6 @@ public class DeductReturned {
             }
         }
 
-        return breifItems;
+        return briefItems;
     }
 }

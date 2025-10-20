@@ -9,7 +9,6 @@ technology/tabula/detectors/NurminenDetectionAlgorithm$RelevantEdges.class
 technology/tabula/Page$Builder.class
 technology/tabula/json/TableSerializer.class
 technology/tabula/CommandLineApp.class
-com/tabulaweb/parser/BreifParser.class
 technology/tabula/HasText.class
 technology/tabula/detectors/NurminenDetectionAlgorithm$TextEdge.class
 com/tabulaweb/parser/ExpiryParser.class
@@ -32,6 +31,7 @@ technology/tabula/Ruling$4.class
 com/tabulaweb/controller/HomeController.class
 technology/tabula/detectors/NurminenDetectionAlgorithm$1.class
 technology/tabula/extractors/SpreadsheetExtractionAlgorithm$Direction.class
+com/tabulaweb/model/briefItem.class
 technology/tabula/writers/CSVWriter.class
 technology/tabula/detectors/NurminenDetectionAlgorithm.class
 com/tabulaweb/utils/CatalogueSorter.class
@@ -45,7 +45,6 @@ technology/tabula/ObjectExtractor.class
 technology/tabula/Ruling$1.class
 com/tabulaweb/model/Expiry.class
 technology/tabula/TextChunk.class
-com/tabulaweb/model/BreifItem.class
 technology/tabula/Page.class
 com/tabulaweb/utils/TalabiyaProcessor.class
 com/tabulaweb/parser/DetailedParser.class
@@ -86,6 +85,7 @@ technology/tabula/CellPosition.class
 com/tabulaweb/controller/UploadPDFController.class
 com/tabulaweb/utils/CatalogueLoader$1.class
 technology/tabula/CommandLineApp$1.class
+com/tabulaweb/parser/briefParser.class
 technology/tabula/Cell.class
 technology/tabula/CommandLineApp$TableExtractor.class
 com/tabulaweb/utils/CatalogueLoader.class

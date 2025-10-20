@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.tabulaweb.model.BreifItem;
+import com.tabulaweb.model.briefItem;
 import com.tabulaweb.model.Expiry;
 
 public class UpdateExpiryDate {
@@ -44,9 +44,9 @@ public class UpdateExpiryDate {
         return day + "/" + month + "/" + fullYear;
     }
 
-    // Updates expiry field in breifItems list based on matching Expiry codes
-    public static List<BreifItem> updateExpiryDates(List<BreifItem> breifItems, List<Expiry> expiries) {
-        for (BreifItem item : breifItems) {
+    // Updates expiry field in briefItems list based on matching Expiry codes
+    public static List<briefItem> updateExpiryDates(List<briefItem> briefItems, List<Expiry> expiries) {
+        for (briefItem item : briefItems) {
             String code = item.getCode();
             for (Expiry expiry : expiries) {
                 if (expiry.getCode().equals(code)) {
@@ -58,6 +58,6 @@ public class UpdateExpiryDate {
             }
         }
 
-        return breifItems;
+        return briefItems;
     }
 }

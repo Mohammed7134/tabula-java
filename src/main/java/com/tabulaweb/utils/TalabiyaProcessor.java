@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.tabulaweb.model.BreifItem;
+import com.tabulaweb.model.briefItem;
 import com.tabulaweb.model.CatalogueItem;
 import com.tabulaweb.model.Expiry;
 
@@ -19,12 +19,12 @@ public class TalabiyaProcessor {
             "6505-99-02-05571", "6505-99-02-05572", "6505-99-02-05591", "6505-99-02-06545", "6505-99-02-08062", "6505-99-02-08065"
     );
 
-    public static List<CatalogueItem> writeTalabiya(List<BreifItem> breifItems, List<Expiry> expiries) {
+    public static List<CatalogueItem> writeTalabiya(List<briefItem> briefItems, List<Expiry> expiries) {
         // Load catalogue items from JSON
         // This assumes CatalogueLoader.loadCatalogueFromJson() returns a List<CatalogueItem>
         List<CatalogueItem> catalogueItems = CatalogueLoader.loadCatalogueFromJson();
-        // Check if breifItems which is the items movement file is null or empty
-        if (breifItems == null || breifItems.isEmpty()) {
+        // Check if briefItems which is the items movement file is null or empty
+        if (briefItems == null || briefItems.isEmpty()) {
             System.out.println("No movement data found.");
             return List.of();
         }
@@ -33,8 +33,8 @@ public class TalabiyaProcessor {
             System.out.println("No catalogue items found.");
             return List.of();
         }
-        // Process each breif item
-        for (BreifItem m : breifItems) {
+        // Process each brief item
+        for (briefItem m : briefItems) {
             String code = m.getCode();
             String finalCode = formatCode(code);
             if (finalCode != null

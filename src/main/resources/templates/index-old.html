@@ -79,20 +79,20 @@
 
                         returnItems = extractReturnOrders();
 
-                        const breif = Array.from(files).find(file => file.name.toLowerCase().includes("breif"));
-                        if (!breif) {
-                            alert("Breif file not found.");
+                        const brief = Array.from(files).find(file => file.name.toLowerCase().includes("brief"));
+                        if (!brief) {
+                            alert("brief file not found.");
                             return;
                         }
 
-                        const formDataBreif = new FormData();
-                        formDataBreif.append('file', breif);
-                        formDataBreif.append('fileTitle', breif.name.substring(0, breif.name.lastIndexOf('.')).toLowerCase());
-                        console.log(breif.name.substring(0, breif.name.lastIndexOf('.')).toLowerCase());
+                        const formDatabrief = new FormData();
+                        formDatabrief.append('file', brief);
+                        formDatabrief.append('fileTitle', brief.name.substring(0, brief.name.lastIndexOf('.')).toLowerCase());
+                        console.log(brief.name.substring(0, brief.name.lastIndexOf('.')).toLowerCase());
 
                         return fetch('/upload', {
                             method: 'POST',
-                            body: formDataBreif
+                            body: formDatabrief
                         }).then(res => res.json());
                     })
                     .then(async (data) => {
