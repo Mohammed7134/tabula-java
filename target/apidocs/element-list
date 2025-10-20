@@ -1,0 +1,12 @@
+com.tabulaweb
+com.tabulaweb.controller
+com.tabulaweb.model
+com.tabulaweb.parser
+com.tabulaweb.pdf
+com.tabulaweb.utils
+technology.tabula
+technology.tabula.debug
+technology.tabula.detectors
+technology.tabula.extractors
+technology.tabula.json
+technology.tabula.writers
