@@ -97,8 +97,7 @@ public class TalabiyaProcessor {
                         } else {
                             item.setTOTAL("[........]");
                             item.setNOTE("[NE]");
-
-
+                            m.setDone(true);
                         }
                     } else {
                         item.setTOTAL("-----");

@@ -11113,5 +11113,14 @@
     "UNIT": "VIL",
     "IGNORE": false,
     "CARTON": 1
+  },
+  {
+    "NO.": 1236,
+    "ITEMNO": 6505020291111,
+    "ITEMDESC": "BIMEKIZUMAB (BIMZELX) 160MG    2 PEN",
+    "PACK": 2,
+    "UNIT": "PEN",
+    "IGNORE": true,
+    "CARTON": 2
   }
 ]
