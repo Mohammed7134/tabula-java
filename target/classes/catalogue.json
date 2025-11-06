@@ -312,7 +312,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 20
   },
   {
     "NO.": 36,
@@ -330,7 +330,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 20
   },
   {
     "NO.": 38,
@@ -339,7 +339,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 20
   },
   {
     "NO.": 39,
@@ -348,7 +348,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 70
   },
   {
     "NO.": 40,
@@ -357,7 +357,7 @@
     "PACK": 10,
     "UNIT": "BOX",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 70
   },
   {
     "NO.": 41,
@@ -366,7 +366,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 70
   },
   {
     "NO.": 42,
@@ -384,7 +384,7 @@
     "PACK": 20,
     "UNIT": "CRT",
     "IGNORE": false,
-    "CARTON": 20
+    "CARTON": 70
   },
   {
     "NO.": 44,
@@ -393,7 +393,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 70
   },
   {
     "NO.": 45,
@@ -645,7 +645,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 73,
