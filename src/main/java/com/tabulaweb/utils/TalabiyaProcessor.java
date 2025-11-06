@@ -68,8 +68,13 @@ public class TalabiyaProcessor {
                     double difference = m.getDifference();
                     System.out.println("Processing item: " + item.getITEMNO() + ", difference: " + difference);
                     if (difference < 0) {
-                        int cartons = (int) Math.round(Math.abs(difference) / parseDoubleSafe(item.getCARTON()));
-                        int total = (int) Math.round(cartons * parseDoubleSafe(item.getCARTON())/packSize);
+                        if ((parseDoubleSafe(item.getCARTON())/packSize) % 1 == 0) {
+                            int cartons = (int) Math.round(Math.abs(difference) / parseDoubleSafe(item.getCARTON()));
+                            int total = (int) Math.round(cartons * parseDoubleSafe(item.getCARTON())/packSize);
+                        } else {
+                            item.setTOTAL("-----");
+                            item.setNOTE("[UF]");
+                        }
                         if (Boolean.TRUE.equals(item.getIGNORE())) {
                             item.setTOTAL("-----");
                             item.setNOTE("[IG]");
@@ -93,7 +98,6 @@ public class TalabiyaProcessor {
                             } else {
                                 item.setTOTAL("-----");
                                 item.setNOTE("[UF]");
-
                             }
                         } else {
                             item.setTOTAL("[........]");
