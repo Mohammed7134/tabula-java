@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.tabulaweb.model.briefItem;
 import com.tabulaweb.model.CatalogueItem;
 import com.tabulaweb.model.Expiry;
+import com.tabulaweb.model.briefItem;
 
 public class TalabiyaProcessor {
 
@@ -68,7 +68,8 @@ public class TalabiyaProcessor {
                     double difference = m.getDifference();
                     System.out.println("Processing item: " + item.getITEMNO() + ", difference: " + difference);
                     if (difference < 0) {
-                        int total = (int) Math.round(Math.abs(difference) / packSize);
+                        int cartons = (int) Math.round(Math.abs(difference) / parseDoubleSafe(item.getCARTON()));
+                        int total = (int) Math.round(cartons/packSize);
                         if (Boolean.TRUE.equals(item.getIGNORE())) {
                             item.setTOTAL("-----");
                             item.setNOTE("[IG]");
