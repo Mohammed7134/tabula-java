@@ -11149,5 +11149,23 @@
     "UNIT": "PEN",
     "IGNORE": false,
     "CARTON": 30
+  },
+  {
+    "NO.": 1240,
+    "ITEMNO": 6505020207361,
+    "ITEMDESC": "L.R. CONTRAST MEDIA (GADOVIST) 1 VIL",
+    "PACK": 1,
+    "UNIT": "VIL",
+    "IGNORE": false,
+    "CARTON": 1
+  },
+  {
+    "NO.": 1241,
+    "ITEMNO": 6505020207362,
+    "ITEMDESC": "L.R. CONTRAST MEDIA (GADOVIST) 10 VIL",
+    "PACK": 10,
+    "UNIT": "VIL",
+    "IGNORE": false,
+    "CARTON": 1
   }
 ]
