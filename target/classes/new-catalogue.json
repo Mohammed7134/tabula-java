@@ -195,7 +195,7 @@
     "PACK": 6,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 6
+    "CARTON": 336
   },
   {
     "NO.": 23,
@@ -204,7 +204,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 336
   },
   {
     "NO.": 24,
@@ -222,7 +222,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 6
   },
   {
     "NO.": 26,
@@ -267,7 +267,7 @@
     "PACK": 1,
     "UNIT": "SYR",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 31,
@@ -411,7 +411,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 30
   },
   {
     "NO.": 47,
@@ -420,7 +420,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 30
   },
   {
     "NO.": 48,
@@ -429,7 +429,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 30
   },
   {
     "NO.": 49,
@@ -438,7 +438,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 30
   },
   {
     "NO.": 50,
@@ -447,7 +447,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 30
   },
   {
     "NO.": 51,
@@ -456,7 +456,7 @@
     "PACK": 6,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 6
+    "CARTON": 30
   },
   {
     "NO.": 52,
@@ -465,7 +465,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 30
   },
   {
     "NO.": 53,
@@ -474,7 +474,7 @@
     "PACK": 6,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 6
+    "CARTON": 30
   },
   {
     "NO.": 54,
@@ -483,7 +483,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 30
   },
   {
     "NO.": 55,
@@ -510,7 +510,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 58,
@@ -519,7 +519,7 @@
     "PACK": 20,
     "UNIT": "CRT",
     "IGNORE": false,
-    "CARTON": 20
+    "CARTON": 10
   },
   {
     "NO.": 59,
@@ -555,7 +555,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 63,
@@ -572,8 +572,8 @@
     "ITEMDESC": "AMINO ACID SOLUTION 5% 500ML        1BOT",
     "PACK": 1,
     "UNIT": "BOT",
-    "IGNORE": false,
-    "CARTON": 1
+    "IGNORE": true,
+    "CARTON": 10
   },
   {
     "NO.": 65,
@@ -581,7 +581,7 @@
     "ITEMDESC": "AMINO ACID SOLUTION 5% 500ML       10BOT",
     "PACK": 10,
     "UNIT": "PKT",
-    "IGNORE": false,
+    "IGNORE": true,
     "CARTON": 10
   },
   {
@@ -600,7 +600,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 68,
@@ -663,7 +663,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 75,
@@ -672,7 +672,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 100
   },
   {
     "NO.": 76,
@@ -681,7 +681,7 @@
     "PACK": 25,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 25
+    "CARTON": 100
   },
   {
     "NO.": 77,
@@ -690,7 +690,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 100
   },
   {
     "NO.": 78,
@@ -699,7 +699,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 79,
@@ -708,7 +708,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 100
   },
   {
     "NO.": 80,
@@ -726,7 +726,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 50
   },
   {
     "NO.": 82,
@@ -744,7 +744,7 @@
     "PACK": 100,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 100
+    "CARTON": 50
   },
   {
     "NO.": 84,
@@ -897,7 +897,7 @@
     "PACK": 1,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 101,
@@ -906,7 +906,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 21
   },
   {
     "NO.": 102,
@@ -915,7 +915,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 21
   },
   {
     "NO.": 103,
@@ -924,7 +924,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 21
   },
   {
     "NO.": 104,
@@ -933,7 +933,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 21
   },
   {
     "NO.": 105,
@@ -960,7 +960,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 21
   },
   {
     "NO.": 108,
@@ -969,7 +969,7 @@
     "PACK": 7,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 7
+    "CARTON": 21
   },
   {
     "NO.": 109,
@@ -987,7 +987,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 21
   },
   {
     "NO.": 111,
@@ -1401,7 +1401,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 4
   },
   {
     "NO.": 157,
@@ -1428,7 +1428,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 280
   },
   {
     "NO.": 160,
@@ -1527,7 +1527,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 800
+    "CARTON": 96
   },
   {
     "NO.": 171,
@@ -1536,7 +1536,7 @@
     "PACK": 240,
     "UNIT": "CRT",
     "IGNORE": false,
-    "CARTON": 800
+    "CARTON": 96
   },
   {
     "NO.": 172,
@@ -1545,7 +1545,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 800
+    "CARTON": 96
   },
   {
     "NO.": 173,
@@ -1554,7 +1554,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 200
   },
   {
     "NO.": 174,
@@ -1590,7 +1590,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 200
   },
   {
     "NO.": 178,
@@ -1608,7 +1608,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 180,
@@ -1680,7 +1680,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 188,
@@ -1689,7 +1689,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 189,
@@ -1707,7 +1707,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 191,
@@ -1833,7 +1833,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 205,
@@ -1860,7 +1860,7 @@
     "PACK": 3,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 3
+    "CARTON": 10
   },
   {
     "NO.": 208,
@@ -1878,7 +1878,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 210,
@@ -1896,7 +1896,7 @@
     "PACK": 3,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 3
+    "CARTON": 10
   },
   {
     "NO.": 212,
@@ -1914,7 +1914,7 @@
     "PACK": 24,
     "UNIT": "BOX",
     "IGNORE": false,
-    "CARTON": 60
+    "CARTON": 20
   },
   {
     "NO.": 214,
@@ -1932,7 +1932,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 60
+    "CARTON": 20
   },
   {
     "NO.": 216,
@@ -1941,7 +1941,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 60
+    "CARTON": 20
   },
   {
     "NO.": 217,
@@ -1950,7 +1950,7 @@
     "PACK": 40,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 60
+    "CARTON": 20
   },
   {
     "NO.": 218,
@@ -1959,7 +1959,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 50
   },
   {
     "NO.": 219,
@@ -1968,7 +1968,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 50
   },
   {
     "NO.": 220,
@@ -1977,7 +1977,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 50
   },
   {
     "NO.": 221,
@@ -1986,7 +1986,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 50
   },
   {
     "NO.": 222,
@@ -2004,7 +2004,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 50
   },
   {
     "NO.": 224,
@@ -2013,7 +2013,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 50
   },
   {
     "NO.": 225,
@@ -2022,7 +2022,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 50
   },
   {
     "NO.": 226,
@@ -2067,7 +2067,7 @@
     "PACK": 100,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 100
+    "CARTON": 256
   },
   {
     "NO.": 231,
@@ -2076,7 +2076,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 256
   },
   {
     "NO.": 232,
@@ -2085,7 +2085,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 256
   },
   {
     "NO.": 233,
@@ -2094,7 +2094,7 @@
     "PACK": 8,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 8
+    "CARTON": 256
   },
   {
     "NO.": 234,
@@ -2103,7 +2103,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 235,
@@ -2139,7 +2139,7 @@
     "PACK": 5,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 100
   },
   {
     "NO.": 239,
@@ -2148,7 +2148,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 100
   },
   {
     "NO.": 240,
@@ -2157,7 +2157,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 241,
@@ -2175,7 +2175,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 243,
@@ -2193,7 +2193,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 245,
@@ -2202,7 +2202,7 @@
     "PACK": 10,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 100
   },
   {
     "NO.": 246,
@@ -2247,7 +2247,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 480
   },
   {
     "NO.": 251,
@@ -2256,7 +2256,7 @@
     "PACK": 6,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 6
+    "CARTON": 480
   },
   {
     "NO.": 252,
@@ -2265,7 +2265,7 @@
     "PACK": 60,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 60
+    "CARTON": 480
   },
   {
     "NO.": 253,
@@ -2292,7 +2292,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 256,
@@ -2310,7 +2310,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 12
   },
   {
     "NO.": 258,
@@ -2391,16 +2391,16 @@
     "PACK": 1,
     "UNIT": "PFS",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 267,
     "ITEMNO": 6505020206111,
     "ITEMDESC": "DEXAMETHASONE (OZURDEX) 0.7MG",
-    "PACK": null,
-    "UNIT": null,
+    "PACK": 1,
+    "UNIT": "PFS",
     "IGNORE": true,
-    "CARTON": 0
+    "CARTON": 1
   },
   {
     "NO.": 268,
@@ -2409,7 +2409,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 750
   },
   {
     "NO.": 269,
@@ -2418,7 +2418,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 750
   },
   {
     "NO.": 270,
@@ -2427,7 +2427,7 @@
     "PACK": 100,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 100
+    "CARTON": 750
   },
   {
     "NO.": 271,
@@ -2436,7 +2436,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 750
   },
   {
     "NO.": 272,
@@ -2445,7 +2445,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 750
   },
   {
     "NO.": 273,
@@ -2562,7 +2562,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 286,
@@ -2787,7 +2787,7 @@
     "PACK": 4,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 4
+    "CARTON": 20
   },
   {
     "NO.": 311,
@@ -2796,7 +2796,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 312,
@@ -3066,7 +3066,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 342,
@@ -3075,7 +3075,7 @@
     "PACK": 5,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 343,
@@ -3093,7 +3093,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 345,
@@ -3102,7 +3102,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 346,
@@ -3183,7 +3183,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 8
   },
   {
     "NO.": 355,
@@ -3300,7 +3300,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 60
   },
   {
     "NO.": 368,
@@ -3309,7 +3309,7 @@
     "PACK": 1,
     "UNIT": "PFS",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 60
   },
   {
     "NO.": 369,
@@ -3318,7 +3318,7 @@
     "PACK": 12,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 12
+    "CARTON": 60
   },
   {
     "NO.": 370,
@@ -3327,7 +3327,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 60
   },
   {
     "NO.": 371,
@@ -3345,7 +3345,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 60
   },
   {
     "NO.": 373,
@@ -3354,7 +3354,7 @@
     "PACK": 1,
     "UNIT": "PEN",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 12
   },
   {
     "NO.": 374,
@@ -3372,7 +3372,7 @@
     "PACK": 1,
     "UNIT": "PCS",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 12
   },
   {
     "NO.": 376,
@@ -3390,7 +3390,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 378,
@@ -3408,7 +3408,7 @@
     "PACK": 1,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 380,
@@ -3417,7 +3417,7 @@
     "PACK": 25,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 25
+    "CARTON": 100
   },
   {
     "NO.": 381,
@@ -3426,7 +3426,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 382,
@@ -3435,7 +3435,7 @@
     "PACK": 25,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 25
+    "CARTON": 100
   },
   {
     "NO.": 383,
@@ -3444,7 +3444,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 100
   },
   {
     "NO.": 384,
@@ -3489,7 +3489,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 389,
@@ -3507,7 +3507,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 391,
@@ -3525,7 +3525,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 393,
@@ -3543,7 +3543,7 @@
     "PACK": 1,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 395,
@@ -3552,7 +3552,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 100
   },
   {
     "NO.": 396,
@@ -3570,7 +3570,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 398,
@@ -4020,7 +4020,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 200
   },
   {
     "NO.": 448,
@@ -4065,7 +4065,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 60
   },
   {
     "NO.": 453,
@@ -4272,7 +4272,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 30
   },
   {
     "NO.": 476,
@@ -4326,7 +4326,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 100
   },
   {
     "NO.": 482,
@@ -4335,7 +4335,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 100
   },
   {
     "NO.": 483,
@@ -4470,7 +4470,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 50
   },
   {
     "NO.": 498,
@@ -4515,7 +4515,7 @@
     "PACK": 1,
     "UNIT": "CRG",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 50
   },
   {
     "NO.": 503,
@@ -4524,7 +4524,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 50
   },
   {
     "NO.": 504,
@@ -4542,7 +4542,7 @@
     "PACK": 1,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 506,
@@ -4578,7 +4578,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 510,
@@ -4596,7 +4596,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 50
   },
   {
     "NO.": 512,
@@ -4614,7 +4614,7 @@
     "PACK": 1,
     "UNIT": "SYR",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 514,
@@ -4623,7 +4623,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 515,
@@ -4632,7 +4632,7 @@
     "PACK": 1,
     "UNIT": "SYR",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 516,
@@ -4650,7 +4650,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 518,
@@ -4668,7 +4668,7 @@
     "PACK": 1,
     "UNIT": "SYR",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 520,
@@ -4677,7 +4677,7 @@
     "PACK": 1,
     "UNIT": "SYR",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 521,
@@ -4695,7 +4695,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 523,
@@ -4857,7 +4857,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 8
   },
   {
     "NO.": 541,
@@ -4874,7 +4874,7 @@
     "ITEMDESC": "INFLIXIMAB(REMICADE)100 MG         8 VIL",
     "PACK": 8,
     "UNIT": "BND",
-    "IGNORE": false,
+    "IGNORE": true,
     "CARTON": 8
   },
   {
@@ -4883,7 +4883,7 @@
     "ITEMDESC": "INFLIXIMAB(REMICADE)RECOMB. 100MG 10 VIL",
     "PACK": 10,
     "UNIT": "PKT",
-    "IGNORE": false,
+    "IGNORE": true,
     "CARTON": 10
   },
   {
@@ -4965,7 +4965,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 240
   },
   {
     "NO.": 553,
@@ -4992,7 +4992,7 @@
     "PACK": 1,
     "UNIT": "PEN",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 120
   },
   {
     "NO.": 556,
@@ -5001,7 +5001,7 @@
     "PACK": 3,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 3
+    "CARTON": 120
   },
   {
     "NO.": 557,
@@ -5019,7 +5019,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 200
   },
   {
     "NO.": 559,
@@ -5028,7 +5028,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 120
   },
   {
     "NO.": 560,
@@ -5037,7 +5037,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 120
   },
   {
     "NO.": 561,
@@ -5055,7 +5055,7 @@
     "PACK": 1,
     "UNIT": "CRG",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 200
   },
   {
     "NO.": 563,
@@ -5154,7 +5154,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 105
   },
   {
     "NO.": 574,
@@ -5163,7 +5163,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 105
   },
   {
     "NO.": 575,
@@ -5172,7 +5172,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 105
   },
   {
     "NO.": 576,
@@ -5181,7 +5181,7 @@
     "PACK": 40,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 40
+    "CARTON": 105
   },
   {
     "NO.": 577,
@@ -5280,7 +5280,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 25
   },
   {
     "NO.": 588,
@@ -5289,7 +5289,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 100
   },
   {
     "NO.": 589,
@@ -5298,7 +5298,7 @@
     "PACK": 6,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 6
+    "CARTON": 100
   },
   {
     "NO.": 590,
@@ -5307,7 +5307,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 591,
@@ -5325,7 +5325,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 593,
@@ -5334,7 +5334,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 594,
@@ -5361,7 +5361,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 120
   },
   {
     "NO.": 597,
@@ -5370,7 +5370,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 120
   },
   {
     "NO.": 598,
@@ -5415,7 +5415,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 1500
   },
   {
     "NO.": 603,
@@ -5442,7 +5442,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 1500
   },
   {
     "NO.": 606,
@@ -5451,7 +5451,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 1500
   },
   {
     "NO.": 607,
@@ -5469,7 +5469,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 609,
@@ -5478,7 +5478,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 610,
@@ -5505,7 +5505,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 250
   },
   {
     "NO.": 613,
@@ -5514,7 +5514,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 250
   },
   {
     "NO.": 614,
@@ -5541,7 +5541,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 617,
@@ -5550,7 +5550,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 618,
@@ -5577,7 +5577,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 621,
@@ -5586,7 +5586,7 @@
     "PACK": 5,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 622,
@@ -5613,7 +5613,7 @@
     "PACK": 20,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 20
+    "CARTON": 100
   },
   {
     "NO.": 625,
@@ -5640,7 +5640,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 628,
@@ -5649,7 +5649,7 @@
     "PACK": 20,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 20
+    "CARTON": 100
   },
   {
     "NO.": 629,
@@ -5658,7 +5658,7 @@
     "PACK": 4,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 4
+    "CARTON": 100
   },
   {
     "NO.": 630,
@@ -5676,7 +5676,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 632,
@@ -5685,7 +5685,7 @@
     "PACK": 4,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 4
+    "CARTON": 100
   },
   {
     "NO.": 633,
@@ -5694,7 +5694,7 @@
     "PACK": 20,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 20
+    "CARTON": 100
   },
   {
     "NO.": 634,
@@ -5703,7 +5703,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 20
   },
   {
     "NO.": 635,
@@ -5712,7 +5712,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 20
   },
   {
     "NO.": 636,
@@ -5766,7 +5766,7 @@
     "PACK": 1,
     "UNIT": "BAG",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 642,
@@ -5811,7 +5811,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 50
   },
   {
     "NO.": 647,
@@ -5820,7 +5820,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 50
   },
   {
     "NO.": 648,
@@ -5829,7 +5829,7 @@
     "PACK": 35,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 35
+    "CARTON": 50
   },
   {
     "NO.": 649,
@@ -5838,7 +5838,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 50
   },
   {
     "NO.": 650,
@@ -5865,7 +5865,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 653,
@@ -5874,7 +5874,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 100
   },
   {
     "NO.": 654,
@@ -5883,7 +5883,7 @@
     "PACK": 50,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 100
   },
   {
     "NO.": 655,
@@ -5892,7 +5892,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 656,
@@ -5901,7 +5901,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 100
   },
   {
     "NO.": 657,
@@ -5910,7 +5910,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 658,
@@ -5937,7 +5937,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 661,
@@ -5973,7 +5973,7 @@
     "PACK": 8,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 8
+    "CARTON": 40
   },
   {
     "NO.": 665,
@@ -6000,7 +6000,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 320
   },
   {
     "NO.": 668,
@@ -6009,7 +6009,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 320
   },
   {
     "NO.": 669,
@@ -6027,7 +6027,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 320
   },
   {
     "NO.": 671,
@@ -6036,7 +6036,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 320
   },
   {
     "NO.": 672,
@@ -6045,7 +6045,7 @@
     "PACK": 1,
     "UNIT": "PFS",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 673,
@@ -6054,7 +6054,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 674,
@@ -6063,7 +6063,7 @@
     "PACK": 1,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 675,
@@ -6072,7 +6072,7 @@
     "PACK": 5,
     "UNIT": "BOX",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 676,
@@ -6081,7 +6081,7 @@
     "PACK": 1,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 677,
@@ -6090,7 +6090,7 @@
     "PACK": 5,
     "UNIT": "BOX",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 678,
@@ -6117,7 +6117,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 40
   },
   {
     "NO.": 681,
@@ -6126,7 +6126,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 40
   },
   {
     "NO.": 682,
@@ -6135,7 +6135,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 96
   },
   {
     "NO.": 683,
@@ -6144,7 +6144,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 128
   },
   {
     "NO.": 684,
@@ -6153,7 +6153,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 685,
@@ -6171,7 +6171,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 687,
@@ -6180,7 +6180,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 688,
@@ -6198,7 +6198,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 690,
@@ -6207,7 +6207,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 691,
@@ -6216,7 +6216,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 692,
@@ -6225,7 +6225,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 100
   },
   {
     "NO.": 693,
@@ -6234,7 +6234,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 100
   },
   {
     "NO.": 694,
@@ -6252,7 +6252,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 100
   },
   {
     "NO.": 696,
@@ -6270,7 +6270,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 20
   },
   {
     "NO.": 698,
@@ -6279,7 +6279,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 20
   },
   {
     "NO.": 699,
@@ -6306,7 +6306,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 12
   },
   {
     "NO.": 702,
@@ -6324,7 +6324,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 160
   },
   {
     "NO.": 704,
@@ -6333,7 +6333,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 160
   },
   {
     "NO.": 705,
@@ -6342,7 +6342,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 20
   },
   {
     "NO.": 706,
@@ -6351,7 +6351,7 @@
     "PACK": 10,
     "UNIT": "BOX",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 20
   },
   {
     "NO.": 707,
@@ -6396,7 +6396,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 712,
@@ -6494,8 +6494,8 @@
     "ITEMDESC": "NIRSEVIMAB (BEYFORTUS) 100MG/ML    5 SYR",
     "PACK": 5,
     "UNIT": "PKT",
-    "IGNORE": true,
-    "CARTON": 5
+    "IGNORE": false,
+    "CARTON": 50
   },
   {
     "NO.": 723,
@@ -6503,8 +6503,8 @@
     "ITEMDESC": "NIRSEVIMAB (BEYFORTUS) 50MG/0.5ML 5 SYR ",
     "PACK": 5,
     "UNIT": "PKT",
-    "IGNORE": true,
-    "CARTON": 5
+    "IGNORE": false,
+    "CARTON": 50
   },
   {
     "NO.": 724,
@@ -6531,7 +6531,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 600
   },
   {
     "NO.": 727,
@@ -6540,7 +6540,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 600
   },
   {
     "NO.": 728,
@@ -6549,7 +6549,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 600
   },
   {
     "NO.": 729,
@@ -6558,7 +6558,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 600
   },
   {
     "NO.": 730,
@@ -6567,7 +6567,7 @@
     "PACK": 5,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 600
   },
   {
     "NO.": 731,
@@ -6576,7 +6576,7 @@
     "PACK": 50,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 600
   },
   {
     "NO.": 732,
@@ -6585,7 +6585,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 600
   },
   {
     "NO.": 733,
@@ -6594,7 +6594,7 @@
     "PACK": 1,
     "UNIT": "PEN",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 300
   },
   {
     "NO.": 734,
@@ -6603,7 +6603,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 300
   },
   {
     "NO.": 735,
@@ -6621,7 +6621,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 160
   },
   {
     "NO.": 737,
@@ -6630,7 +6630,7 @@
     "PACK": 10,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 160
   },
   {
     "NO.": 738,
@@ -6639,7 +6639,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 300
   },
   {
     "NO.": 739,
@@ -6648,7 +6648,7 @@
     "PACK": 1,
     "UNIT": "PEN",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 300
   },
   {
     "NO.": 740,
@@ -6711,7 +6711,7 @@
     "PACK": 1,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 747,
@@ -6729,7 +6729,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 600
   },
   {
     "NO.": 749,
@@ -6738,7 +6738,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 600
   },
   {
     "NO.": 750,
@@ -6747,7 +6747,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 600
   },
   {
     "NO.": 751,
@@ -6756,7 +6756,7 @@
     "PACK": 25,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 25
+    "CARTON": 600
   },
   {
     "NO.": 752,
@@ -6765,7 +6765,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 270
   },
   {
     "NO.": 753,
@@ -6774,7 +6774,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 270
   },
   {
     "NO.": 754,
@@ -6783,7 +6783,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 270
   },
   {
     "NO.": 755,
@@ -6792,7 +6792,7 @@
     "PACK": 18,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 18
+    "CARTON": 270
   },
   {
     "NO.": 756,
@@ -6810,7 +6810,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 270
   },
   {
     "NO.": 758,
@@ -6819,7 +6819,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 270
   },
   {
     "NO.": 759,
@@ -6828,7 +6828,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 50
   },
   {
     "NO.": 760,
@@ -6837,7 +6837,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 50
   },
   {
     "NO.": 761,
@@ -6846,7 +6846,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 50
   },
   {
     "NO.": 762,
@@ -6864,7 +6864,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 1400
   },
   {
     "NO.": 764,
@@ -6873,7 +6873,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 1400
   },
   {
     "NO.": 765,
@@ -6882,7 +6882,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 766,
@@ -6891,7 +6891,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 100
   },
   {
     "NO.": 767,
@@ -6909,7 +6909,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 100
   },
   {
     "NO.": 769,
@@ -6963,7 +6963,7 @@
     "PACK": 25,
     "UNIT": "CRT",
     "IGNORE": false,
-    "CARTON": 25
+    "CARTON": 960
   },
   {
     "NO.": 775,
@@ -6972,7 +6972,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 960
   },
   {
     "NO.": 776,
@@ -6981,7 +6981,7 @@
     "PACK": 10,
     "UNIT": "CRT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 960
   },
   {
     "NO.": 777,
@@ -6990,7 +6990,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 960
   },
   {
     "NO.": 778,
@@ -6999,7 +6999,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 360
   },
   {
     "NO.": 779,
@@ -7008,7 +7008,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 360
   },
   {
     "NO.": 780,
@@ -7017,7 +7017,7 @@
     "PACK": 30,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 30
+    "CARTON": 100
   },
   {
     "NO.": 781,
@@ -7026,7 +7026,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 782,
@@ -7035,7 +7035,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 100
   },
   {
     "NO.": 783,
@@ -7098,7 +7098,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 790,
@@ -7188,7 +7188,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 800,
@@ -7197,7 +7197,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 801,
@@ -7224,7 +7224,7 @@
     "PACK": 120,
     "UNIT": "CRT",
     "IGNORE": false,
-    "CARTON": 120
+    "CARTON": 1200
   },
   {
     "NO.": 804,
@@ -7233,7 +7233,7 @@
     "PACK": 10,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 1200
   },
   {
     "NO.": 805,
@@ -7242,7 +7242,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 1200
   },
   {
     "NO.": 806,
@@ -7251,7 +7251,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 1200
   },
   {
     "NO.": 807,
@@ -7260,7 +7260,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 306
   },
   {
     "NO.": 808,
@@ -7269,7 +7269,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 306
   },
   {
     "NO.": 809,
@@ -7350,7 +7350,7 @@
     "PACK": 20,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 20
+    "CARTON": 100
   },
   {
     "NO.": 818,
@@ -7359,7 +7359,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 100
   },
   {
     "NO.": 819,
@@ -7377,7 +7377,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 821,
@@ -7404,7 +7404,7 @@
     "PACK": 2,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 2
+    "CARTON": 20
   },
   {
     "NO.": 824,
@@ -7413,7 +7413,7 @@
     "PACK": 2,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 2
+    "CARTON": 200
   },
   {
     "NO.": 825,
@@ -7530,7 +7530,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 20
   },
   {
     "NO.": 838,
@@ -7539,7 +7539,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 839,
@@ -7737,7 +7737,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 861,
@@ -7782,7 +7782,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 866,
@@ -7818,7 +7818,7 @@
     "PACK": 1,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 30
   },
   {
     "NO.": 870,
@@ -7854,7 +7854,7 @@
     "PACK": 1,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 30
   },
   {
     "NO.": 874,
@@ -7881,7 +7881,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 6
   },
   {
     "NO.": 877,
@@ -7899,7 +7899,7 @@
     "PACK": 2,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 2
+    "CARTON": 20
   },
   {
     "NO.": 879,
@@ -7917,7 +7917,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 50
   },
   {
     "NO.": 881,
@@ -7980,7 +7980,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 50
   },
   {
     "NO.": 888,
@@ -7989,7 +7989,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 50
   },
   {
     "NO.": 889,
@@ -8007,7 +8007,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 891,
@@ -8016,7 +8016,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 240
   },
   {
     "NO.": 892,
@@ -8043,7 +8043,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 895,
@@ -8052,7 +8052,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 896,
@@ -8070,7 +8070,7 @@
     "PACK": 1,
     "UNIT": "BOT",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 898,
@@ -8088,7 +8088,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 500
   },
   {
     "NO.": 900,
@@ -8106,7 +8106,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 902,
@@ -8133,7 +8133,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 20
   },
   {
     "NO.": 905,
@@ -8421,7 +8421,7 @@
     "PACK": 4,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 4
+    "CARTON": 20
   },
   {
     "NO.": 937,
@@ -8430,7 +8430,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 20
   },
   {
     "NO.": 938,
@@ -8439,7 +8439,7 @@
     "PACK": 4,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 4
+    "CARTON": 20
   },
   {
     "NO.": 939,
@@ -8448,7 +8448,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 20
   },
   {
     "NO.": 940,
@@ -8457,7 +8457,7 @@
     "PACK": 3,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 3
+    "CARTON": 120
   },
   {
     "NO.": 941,
@@ -8466,7 +8466,7 @@
     "PACK": 3,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 3
+    "CARTON": 120
   },
   {
     "NO.": 942,
@@ -8475,7 +8475,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 50
   },
   {
     "NO.": 943,
@@ -8574,7 +8574,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 60
   },
   {
     "NO.": 954,
@@ -8583,7 +8583,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 60
   },
   {
     "NO.": 955,
@@ -8592,7 +8592,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 60
   },
   {
     "NO.": 956,
@@ -8601,7 +8601,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 50
+    "CARTON": 60
   },
   {
     "NO.": 957,
@@ -8618,7 +8618,7 @@
     "ITEMDESC": "SYNAGIS 100MG/VIAL",
     "PACK": 1,
     "UNIT": "VIL",
-    "IGNORE": false,
+    "IGNORE": true,
     "CARTON": 1
   },
   {
@@ -8627,7 +8627,7 @@
     "ITEMDESC": "T.R.H. 0.2MG/ML  1ML               5 AMP",
     "PACK": 5,
     "UNIT": "PKT",
-    "IGNORE": false,
+    "IGNORE": true,
     "CARTON": 5
   },
   {
@@ -8646,7 +8646,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 16
   },
   {
     "NO.": 962,
@@ -8655,7 +8655,7 @@
     "PACK": 1,
     "UNIT": "PCS",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 963,
@@ -8808,7 +8808,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 120
   },
   {
     "NO.": 980,
@@ -8925,7 +8925,7 @@
     "PACK": 4,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 4
+    "CARTON": 80
   },
   {
     "NO.": 993,
@@ -8961,7 +8961,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 630
   },
   {
     "NO.": 997,
@@ -8970,7 +8970,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 630
   },
   {
     "NO.": 998,
@@ -9015,7 +9015,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 10
   },
   {
     "NO.": 1003,
@@ -9024,7 +9024,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 10
   },
   {
     "NO.": 1004,
@@ -9042,7 +9042,7 @@
     "PACK": 2,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 2
+    "CARTON": 160
   },
   {
     "NO.": 1006,
@@ -9222,7 +9222,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 150
   },
   {
     "NO.": 1026,
@@ -9231,7 +9231,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 150
   },
   {
     "NO.": 1027,
@@ -9267,7 +9267,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 25
   },
   {
     "NO.": 1031,
@@ -9276,7 +9276,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 25
   },
   {
     "NO.": 1032,
@@ -9285,7 +9285,7 @@
     "PACK": 3,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 3
+    "CARTON": 25
   },
   {
     "NO.": 1033,
@@ -9312,7 +9312,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 25
   },
   {
     "NO.": 1036,
@@ -9438,7 +9438,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 5
+    "CARTON": 50
   },
   {
     "NO.": 1050,
@@ -10437,7 +10437,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 1161,
@@ -10446,7 +10446,7 @@
     "PACK": 10,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 100
   },
   {
     "NO.": 1162,
@@ -10455,7 +10455,7 @@
     "PACK": 25,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 25
+    "CARTON": 100
   },
   {
     "NO.": 1163,
@@ -10896,7 +10896,7 @@
     "PACK": 1,
     "UNIT": "SYR",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 40
   },
   {
     "NO.": 1212,
@@ -10905,7 +10905,7 @@
     "PACK": 4,
     "UNIT": "BOX",
     "IGNORE": false,
-    "CARTON": 4
+    "CARTON": 40
   },
   {
     "NO.": 1213,
@@ -10914,7 +10914,7 @@
     "PACK": 1,
     "UNIT": "SYR",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 1214,
@@ -10923,7 +10923,7 @@
     "PACK": 4,
     "UNIT": "BOX",
     "IGNORE": false,
-    "CARTON": 4
+    "CARTON": 100
   },
   {
     "NO.": 1215,
@@ -10932,7 +10932,7 @@
     "PACK": 1,
     "UNIT": "SYR",
     "IGNORE": false,
-    "CARTON": 1
+    "CARTON": 100
   },
   {
     "NO.": 1216,
@@ -10941,7 +10941,7 @@
     "PACK": 4,
     "UNIT": "BOX",
     "IGNORE": false,
-    "CARTON": 4
+    "CARTON": 100
   },
   {
     "NO.": 1217,
