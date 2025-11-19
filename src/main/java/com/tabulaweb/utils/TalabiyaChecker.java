@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.tabulaweb.model.briefItem;
 import com.tabulaweb.model.CatalogueItem;
 import com.tabulaweb.model.Expiry;
 import com.tabulaweb.model.RequestedItem;
+import com.tabulaweb.model.briefItem;
 
 public class TalabiyaChecker {
 
@@ -167,24 +167,25 @@ public class TalabiyaChecker {
                         double out = item.getMOVEMENT();
                         double requestedQuantity = requestedItem.getHisQuantity();
                         item.setTOTAL(String.format("%.2f",requestedQuantity/parseDoubleSafe(item.getPACK())));
+                        String loose = (parseDoubleSafe(item.getCARTON())/parseDoubleSafe(item.getPACK())) % 1 == 0 ? "" : " (Loose)";
                         if(item.getIGNORE()) {
                                 item.setNOTE("[Requested - Check - Must ignore]");
                         } else {
                             if (out == 0) {
-                                item.setNOTE("[Requested - Check - Not Moved]");
+                                item.setNOTE("[Requested - Check - Not Moved "+loose+"]");
                             } else {
                                 double percentageAfter = (stock + requestedQuantity) / out * 100;
                                 //too much requested if percetage is above 150% 
                                 if (percentageAfter > 150) {
-                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+"]");
+                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+" "+loose+"]");
                                 } else if (percentageAfter <= 150 && percentageAfter >= 40){
-                                    item.setNOTE("[Requested - "+String.format("%.2f", percentageAfter)+"]");
+                                    item.setNOTE("[Requested - "+String.format("%.2f", percentageAfter)+" "+loose+"]");
                                 } else if (percentageAfter < 40 && percentageAfter > 0) {
-                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+"]");
+                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+" "+loose+"]");
                                 } else if (percentageAfter == 0) {
-                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+"]");
+                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+" "+loose+"]");
                                 } else {
-                                    item.setNOTE("[Requested - Check - Else]");
+                                    item.setNOTE("[Requested - Check - Else "+loose+"]");
                                 }
                             }  
                         }
