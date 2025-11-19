@@ -519,7 +519,7 @@
     "PACK": 20,
     "UNIT": "CRT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 20
   },
   {
     "NO.": 59,
@@ -546,7 +546,7 @@
     "PACK": 10,
     "UNIT": "CRT",
     "IGNORE": false,
-    "CARTON": 10
+    "CARTON": 20
   },
   {
     "NO.": 62,
@@ -11130,7 +11130,7 @@
     "PACK": 4,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 2
+    "CARTON": 4
   },
   {
     "NO.": 1238,

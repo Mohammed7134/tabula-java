@@ -167,7 +167,7 @@ public class TalabiyaChecker {
                         double out = item.getMOVEMENT();
                         double requestedQuantity = requestedItem.getHisQuantity();
                         item.setTOTAL(String.format("%.2f",requestedQuantity/parseDoubleSafe(item.getPACK())));
-                        String loose = (parseDoubleSafe(item.getCARTON())/parseDoubleSafe(item.getPACK())) % 1 == 0 ? "" : " (Loose)";
+                        String loose = (requestedQuantity/parseDoubleSafe(item.getCARTON())) % 1 == 0 ? "" : " (Loose)";
                         if(item.getIGNORE()) {
                                 item.setNOTE("[Requested - Check - Must ignore]");
                         } else {
