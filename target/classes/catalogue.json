@@ -3417,7 +3417,7 @@
     "PACK": 25,
     "UNIT": "BND",
     "IGNORE": false,
-    "CARTON": 100
+    "CARTON": 50
   },
   {
     "NO.": 381,
@@ -3426,7 +3426,7 @@
     "PACK": 1,
     "UNIT": "VIL",
     "IGNORE": false,
-    "CARTON": 100
+    "CARTON": 50
   },
   {
     "NO.": 382,
@@ -3435,7 +3435,7 @@
     "PACK": 25,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 100
+    "CARTON": 50
   },
   {
     "NO.": 383,
@@ -3444,7 +3444,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 100
+    "CARTON": 50
   },
   {
     "NO.": 384,
