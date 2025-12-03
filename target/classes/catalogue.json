@@ -11185,5 +11185,14 @@
     "UNIT": "VIL",
     "IGNORE": true,
     "CARTON": 144
+  },
+  {
+    "NO.": 1244,
+    "ITEMNO": 6505020314141,
+    "ITEMDESC": "DENOSUMAB (XGEVA) 120 MG",
+    "PACK": 1,
+    "UNIT": "VIL",
+    "IGNORE": false,
+    "CARTON": 1
   }
 ]
