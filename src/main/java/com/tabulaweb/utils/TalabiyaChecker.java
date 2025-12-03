@@ -172,20 +172,20 @@ public class TalabiyaChecker {
                                 item.setNOTE("[Requested - Check - Must ignore]");
                         } else {
                             if (out == 0) {
-                                item.setNOTE("[Requested - Check - Not Moved "+loose+"]");
+                                item.setNOTE("[Requested - Check - Not Moved]"+loose);
                             } else {
                                 double percentageAfter = (stock + requestedQuantity) / out * 100;
                                 //too much requested if percetage is above 150% 
                                 if (percentageAfter > 150) {
-                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+" "+loose+"]");
+                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+"]"+loose);
                                 } else if (percentageAfter <= 150 && percentageAfter >= 40){
-                                    item.setNOTE("[Requested - "+String.format("%.2f", percentageAfter)+" "+loose+"]");
+                                    item.setNOTE("[Requested - "+String.format("%.2f", percentageAfter)+"]"+loose);
                                 } else if (percentageAfter < 40 && percentageAfter > 0) {
-                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+" "+loose+"]");
+                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+"]"+loose);
                                 } else if (percentageAfter == 0) {
-                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+" "+loose+"]");
+                                    item.setNOTE("[Requested - Check - "+String.format("%.2f", percentageAfter)+"]"+loose);
                                 } else {
-                                    item.setNOTE("[Requested - Check - Else "+loose+"]");
+                                    item.setNOTE("[Requested - Check - Else]"+loose);
                                 }
                             }  
                         }
