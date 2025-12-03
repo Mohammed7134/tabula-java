@@ -2967,7 +2967,7 @@
     "PACK": 5,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 945
+    "CARTON": 1200
   },
   {
     "NO.": 331,
@@ -2976,7 +2976,7 @@
     "PACK": 20,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 945
+    "CARTON": 1200
   },
   {
     "NO.": 332,
@@ -2985,7 +2985,7 @@
     "PACK": 100,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 945
+    "CARTON": 1200
   },
   {
     "NO.": 333,
@@ -2994,7 +2994,7 @@
     "PACK": 50,
     "UNIT": "PKT",
     "IGNORE": false,
-    "CARTON": 945
+    "CARTON": 1200
   },
   {
     "NO.": 334,
@@ -3003,7 +3003,7 @@
     "PACK": 1,
     "UNIT": "AMP",
     "IGNORE": false,
-    "CARTON": 945
+    "CARTON": 1200
   },
   {
     "NO.": 335,
