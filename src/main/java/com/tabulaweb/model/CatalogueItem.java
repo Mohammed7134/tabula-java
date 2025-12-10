@@ -20,6 +20,12 @@ public class CatalogueItem {
     private String ITEMDESC;
     @JsonProperty("CARTON")
     private String CARTON;
+    @JsonProperty("ALTERNATIVE")
+    private Boolean ALTERNATIVE;
+    @JsonProperty("MINIMUM")
+    private String MINIMUM;
+    @JsonProperty("MAXIMUM")
+    private String MAXIMUM;
 
     // --- extra field not in JSON ---
     private String NOTE;
@@ -47,6 +53,15 @@ public class CatalogueItem {
     public Boolean getIGNORE() { return IGNORE; }
     public void setIGNORE(Boolean IGNORE) { this.IGNORE = IGNORE; }
 
+    public Boolean getALTERNATIVE() { return ALTERNATIVE; }
+    public void setALTERNATIVE(Boolean ALTERNATIVE) { this.ALTERNATIVE = ALTERNATIVE; }
+
+    public String getMINIMUM() { return MINIMUM; }
+    public void setMINIMUM(String MINIMUM) { this.MINIMUM = MINIMUM; }
+
+    public String getMAXIMUM() { return MAXIMUM; }
+    public void setMAXIMUM(String MAXIMUM) { this.MAXIMUM = MAXIMUM; }
+
     // new field getter/setter
     public String getNOTE() { return NOTE; }
     public void setNOTE(String NOTE) { this.NOTE = NOTE; }
@@ -66,7 +81,9 @@ public class CatalogueItem {
                 + ", TOTAL='" + TOTAL + '\''
                 + ", IGNORE=" + IGNORE
                 + ", ITEMDESC='" + ITEMDESC + '\''
-                + ", NOTE='" + NOTE + '\''
+                + ", MAXIMUM='" + MAXIMUM + '\''
+                + ", MINIMUM='" + MINIMUM + '\''
+                + ", ALTERNATIVE='" + ALTERNATIVE + '\''
                 + '}';
     }
 }

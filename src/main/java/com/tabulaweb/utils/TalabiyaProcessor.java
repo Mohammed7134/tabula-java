@@ -2,6 +2,7 @@ package com.tabulaweb.utils;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
@@ -19,7 +20,7 @@ public class TalabiyaProcessor {
             "6505-99-02-05571", "6505-99-02-05572", "6505-99-02-05591", "6505-99-02-06545", "6505-99-02-08062", "6505-99-02-08065"
     );
 
-    public static List<CatalogueItem> writeTalabiya(List<briefItem> briefItems, List<Expiry> expiries) {
+    public static List<CatalogueItem> writeTalabiya(List<briefItem> briefItems, List<Expiry> expiries, boolean urgent) {
         // Load catalogue items from JSON
         // This assumes CatalogueLoader.loadCatalogueFromJson() returns a List<CatalogueItem>
         List<CatalogueItem> catalogueItems = CatalogueLoader.loadCatalogueFromJson();
@@ -59,6 +60,8 @@ public class TalabiyaProcessor {
                     continue;
                 }
                 for (CatalogueItem item : matchingItems) {
+                    item.setSTOCK(m.getCurrentStock());
+                    item.setMOVEMENT(m.getTotalOut());
                     double packSize = parseDoubleSafe(item.getPACK());
                     if (packSize <= 0) {
                         continue;
@@ -133,6 +136,7 @@ public class TalabiyaProcessor {
                         item.setNOTE("[NM]");
                     } else {
                         if (!item.getIGNORE()) {
+                            item.setSTOCK(0);
                             System.out.println("No expiry found for code: " + code);
                             item.setTOTAL("[........]");
                             item.setNOTE("[N/A]");
@@ -147,10 +151,66 @@ public class TalabiyaProcessor {
                 }
             }
         }
+        if (urgent) {
+            return filterItems(catalogueItems);
+        }
+        
         CatalogueSorter.sortCatalogue(catalogueItems);
         return catalogueItems;
     }
+    private static List<CatalogueItem> filterItems(List<CatalogueItem> items) {
+        List<CatalogueItem> filteredCatalogue = items.stream()
+            .filter(item -> {
+                double stock = item.getSTOCK();
+                double movement = item.getMOVEMENT();
+                double minimum = parseDoubleSafe(item.getMINIMUM());
+                boolean nm = item.getNOTE() != null && item.getNOTE().contains("[NM]");
+                return (stock < minimum) && !nm && !item.getIGNORE();
+            })
+            .collect(Collectors.toList());
+            filteredCatalogue = filteredCatalogue.stream()
+                .collect(Collectors.groupingBy(item -> item.getITEMNO().substring(0, 12)))
+                .values().stream()
+                .flatMap(group -> {
+                    // 1️⃣ Collect special items (always keep them)
+                    List<CatalogueItem> specials = group.stream()
+                        .filter(item -> specialCodes.contains(item.getITEMNO()))
+                        .collect(Collectors.toList());
 
+                    // 2️⃣ Collect non-specials
+                    List<CatalogueItem> nonSpecials = group.stream()
+                        .filter(item -> !specialCodes.contains(item.getITEMNO()))
+                        .collect(Collectors.toList());
+
+                    // Split non-specials into zero and non-zero totals
+                    List<CatalogueItem> nonZeroTotals = nonSpecials.stream()
+                        .filter(item -> parseDoubleSafe(item.getTOTAL()) != 0)
+                        .collect(Collectors.toList());
+
+                    List<CatalogueItem> zeroTotals = nonSpecials.stream()
+                        .filter(item -> parseDoubleSafe(item.getTOTAL()) == 0)
+                        .collect(Collectors.toList());
+
+                    List<CatalogueItem> resultNonSpecials = new ArrayList<>();
+
+                    if (!nonZeroTotals.isEmpty()) {
+                        // Case 1️⃣ and 3️⃣: keep only one non-zero instance
+                        resultNonSpecials.add(nonZeroTotals.get(0));
+                    } else if (!zeroTotals.isEmpty()) {
+                        // Case 2️⃣: all zeros → keep one zero instance
+                        resultNonSpecials.add(zeroTotals.get(0));
+                    }
+
+                    // 3️⃣ Merge specials and non-specials
+                    List<CatalogueItem> result = new ArrayList<>();
+                    result.addAll(specials);
+                    result.addAll(resultNonSpecials);
+
+                    return result.stream();
+                })
+                .collect(Collectors.toList());
+        return filteredCatalogue;
+    }
     private static double parseDoubleSafe(String val) {
         try {
             return Double.parseDouble(val);
