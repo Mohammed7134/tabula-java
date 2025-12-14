@@ -197,11 +197,11 @@
     "ITEMDESC": "ADALIMUMAB (HUMIRA) 40MG/0.4ML 2PEN",
     "PACK": "2",
     "UNIT": "PKT",
-    "IGNORE": "FALSE",
+    "IGNORE": "TRUE",
     "CARTON": "2",
     "ALTERNATIVE": "FALSE",
-    "MINIMUM": "57",
-    "MAXIMUM": ""
+    "MINIMUM": "0",
+    "MAXIMUM": "0"
   },
   {
     "NO.": "18",
@@ -1099,7 +1099,7 @@
     "UNIT": "PKT",
     "IGNORE": "FALSE",
     "CARTON": "10",
-    "ALTERNATIVE": "FALSE",
+    "ALTERNATIVE": "TRUE",
     "MINIMUM": "20",
     "MAXIMUM": ""
   },
@@ -1147,7 +1147,7 @@
     "UNIT": "AMP",
     "IGNORE": "FALSE",
     "CARTON": "1",
-    "ALTERNATIVE": "FALSE",
+    "ALTERNATIVE": "TRUE",
     "MINIMUM": "5",
     "MAXIMUM": ""
   },
@@ -1183,7 +1183,7 @@
     "UNIT": "PKT",
     "IGNORE": "FALSE",
     "CARTON": "1",
-    "ALTERNATIVE": "FALSE",
+    "ALTERNATIVE": "TRUE",
     "MINIMUM": "5",
     "MAXIMUM": ""
   },
@@ -1664,8 +1664,8 @@
     "IGNORE": "FALSE",
     "CARTON": "4",
     "ALTERNATIVE": "FALSE",
-    "MINIMUM": "16",
-    "MAXIMUM": ""
+    "MINIMUM": "0",
+    "MAXIMUM": "0"
   },
   {
     "NO.": "140",
@@ -14925,6 +14925,42 @@
     "CARTON": "1",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "0",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1245",
+    "ITEMNO": "6505020213716",
+    "ITEMDESC": "H.A-VIT. A 100,000U/ML/2ML   6-AMP",
+    "PACK": "6",
+    "UNIT": "VIL",
+    "IGNORE": "FALSE",
+    "CARTON": "6",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "6",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1246",
+    "ITEMNO": "6505020600201",
+    "ITEMDESC": "HPV VACCINE (9 VALENT) GARDASIL",
+    "PACK": "1",
+    "UNIT": "PFS",
+    "IGNORE": "TRUE",
+    "CARTON": "1",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "0",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1247",
+    "ITEMNO": "6505020213711",
+    "ITEMDESC": "VIT.A 100,000U/2ML",
+    "PACK": "1",
+    "UNIT": "VIL",
+    "IGNORE": "FALSE",
+    "CARTON": "6",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "6",
     "MAXIMUM": ""
   }
 ]
