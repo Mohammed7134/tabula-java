@@ -14926,5 +14926,41 @@
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "0",
     "MAXIMUM": ""
+  },
+  {
+    "NO.": "1245",
+    "ITEMNO": "6505020213716",
+    "ITEMDESC": "H.A-VIT. A 100,000U/ML/2ML   6-AMP",
+    "PACK": "6",
+    "UNIT": "VIL",
+    "IGNORE": "FALSE",
+    "CARTON": "6",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "6",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1246",
+    "ITEMNO": "6505020600201",
+    "ITEMDESC": "HPV VACCINE (9 VALENT) GARDASIL",
+    "PACK": "1",
+    "UNIT": "PFS",
+    "IGNORE": "TRUE",
+    "CARTON": "1",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "0",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1247",
+    "ITEMNO": "6505020213711",
+    "ITEMDESC": "VIT.A 100,000U/2ML",
+    "PACK": "1",
+    "UNIT": "VIL",
+    "IGNORE": "FALSE",
+    "CARTON": "6",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "6",
+    "MAXIMUM": ""
   }
 ]
