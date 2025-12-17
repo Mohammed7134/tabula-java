@@ -14962,5 +14962,17 @@
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "6",
     "MAXIMUM": ""
+  },
+  {
+    "NO.": "1248",
+    "ITEMNO": "6505020214983",
+    "ITEMDESC": "ARTRO PATCH 3ML     1PFS",
+    "PACK": "1",
+    "UNIT": "PFS",
+    "IGNORE": "FALSE",
+    "CARTON": "31",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "10",
+    "MAXIMUM": ""
   }
 ]
