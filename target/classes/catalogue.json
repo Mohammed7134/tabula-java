@@ -5102,7 +5102,7 @@
   {
     "NO.": "426",
     "ITEMNO": "6505020210635",
-    "ITEMDESC": "FOLLITROPE 75IU",
+    "ITEMDESC": "RECOMB.HUMAN F.S.H 75U (FOSTIMON) 1 AMP",
     "PACK": "1",
     "UNIT": "AMP",
     "IGNORE": "FALSE",
@@ -6055,7 +6055,7 @@
     "UNIT": "PKT",
     "IGNORE": "FALSE",
     "CARTON": "10",
-    "ALTERNATIVE": "FALSE",
+    "ALTERNATIVE": "TRUE",
     "MINIMUM": "65",
     "MAXIMUM": ""
   },
@@ -6067,7 +6067,7 @@
     "UNIT": "CRT",
     "IGNORE": "FALSE",
     "CARTON": "10",
-    "ALTERNATIVE": "FALSE",
+    "ALTERNATIVE": "TRUE",
     "MINIMUM": "65",
     "MAXIMUM": ""
   },
@@ -6079,7 +6079,7 @@
     "UNIT": "PKT",
     "IGNORE": "FALSE",
     "CARTON": "10",
-    "ALTERNATIVE": "FALSE",
+    "ALTERNATIVE": "TRUE",
     "MINIMUM": "52",
     "MAXIMUM": ""
   },
@@ -6091,7 +6091,7 @@
     "UNIT": "PKT",
     "IGNORE": "FALSE",
     "CARTON": "10",
-    "ALTERNATIVE": "FALSE",
+    "ALTERNATIVE": "TRUE",
     "MINIMUM": "52",
     "MAXIMUM": ""
   },
@@ -7278,7 +7278,7 @@
     "PACK": "10",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "180",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "19",
     "MAXIMUM": ""
@@ -7290,7 +7290,7 @@
     "PACK": "1",
     "UNIT": "AMP",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "180",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "19",
     "MAXIMUM": ""
@@ -7302,7 +7302,7 @@
     "PACK": "5",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "180",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "19",
     "MAXIMUM": ""
@@ -9626,7 +9626,7 @@
   {
     "NO.": "803",
     "ITEMNO": "6505020209346",
-    "ITEMDESC": "PIPERACIL+TAZOBACTAM SOD 4.5GM   120 VIL",
+    "ITEMDESC": "PIPERACIL+TAZOBACTAM SOD 4.5GM  120 VIL",
     "PACK": "120",
     "UNIT": "CRT",
     "IGNORE": "FALSE",
@@ -9638,7 +9638,7 @@
   {
     "NO.": "804",
     "ITEMNO": "6505020209342",
-    "ITEMDESC": "PIPERACIL+TAZOBACTAM(SANDOZ) SOD.4.5GM",
+    "ITEMDESC": "PIPERACIL+TAZOBACTAM SOD.4.5GM(SANDOZ)10VIL",
     "PACK": "10",
     "UNIT": "BND",
     "IGNORE": "FALSE",
@@ -13585,7 +13585,7 @@
   },
   {
     "NO.": "1133",
-    "ITEMNO": "6505020307381",
+    "ITEMNO": "6505020207381",
     "ITEMDESC": "TRIPTORELIN EMBONATE (DIPHERELINE)22.5MG",
     "PACK": "1",
     "UNIT": "VIL",
@@ -14973,6 +14973,54 @@
     "CARTON": "31",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "10",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1249",
+    "ITEMNO": "6505020206461",
+    "ITEMDESC": "HUMAN NOR IMM GLOB 5GM/50M I.V (PRIVIGEN)",
+    "PACK": "20",
+    "UNIT": "VIL",
+    "IGNORE": "FALSE",
+    "CARTON": "20",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "65",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1250",
+    "ITEMNO": "6505020232321",
+    "ITEMDESC": "AZTREONAM 1GM                     10VIL",
+    "PACK": "10",
+    "UNIT": "PKT",
+    "IGNORE": "FALSE",
+    "CARTON": "10",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "72",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1251",
+    "ITEMNO": "6505020232322",
+    "ITEMDESC": "AZTREONAM 1GM                      1VIL",
+    "PACK": "1",
+    "UNIT": "PKT",
+    "IGNORE": "FALSE",
+    "CARTON": "10",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "72",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1252",
+    "ITEMNO": "6505020206461",
+    "ITEMDESC": "HUMAN NOR IMM GLOB 5GM/50ML I.V (PRIVIGE",
+    "PACK": "20",
+    "UNIT": "PKT",
+    "IGNORE": "FALSE",
+    "CARTON": "10",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "65",
     "MAXIMUM": ""
   }
 ]

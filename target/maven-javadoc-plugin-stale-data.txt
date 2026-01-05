@@ -13,7 +13,7 @@
 '/Users/M.Almutawa/Desktop/tabula-java/src/main/java:/Users/M.Almutawa/Desktop/tabula-java/target/generated-sources/annotations'
 -author
 -bottom
-'Copyright &#169; 2025. All rights reserved.'
+'Copyright &#169; 2026. All rights reserved.'
 -charset
 'UTF-8'
 -d
@@ -100,24 +100,24 @@ com.tabulaweb.model
 /Users/M.Almutawa/.m2/repository/commons-fileupload/commons-fileupload/1.4/commons-fileupload-1.4.jar = 1545635228000
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java/.DS_Store = 1754821093459
 /Users/M.Almutawa/Desktop/tabula-java/src/main/java = 1754628715354
-/Users/M.Almutawa/Desktop/tabula-java/target/generated-sources/annotations = 1765951799664
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/constant-values.html = 1765951847074
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/tag-search-index.js = 1765951849265
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/overview-tree.html = 1765951848827
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/module-search-index.js = 1765951849247
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/index.html = 1765951848973
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/package-search-index.js = 1765951849250
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/jquery-ui.overrides.css = 1765951849773
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/serialized-form.html = 1765951847210
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/index-all.html = 1765951849630
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/allpackages-index.html = 1765951849246
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/deprecated-list.html = 1765951848947
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/member-search-index.js = 1765951849259
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/script.js = 1765951849662
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/stylesheet.css = 1765951849658
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/overview-summary.html = 1765951849636
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/help-doc.html = 1765951849652
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/element-list = 1765951846528
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/allclasses-index.html = 1765951849239
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/type-search-index.js = 1765951849256
-/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/search.js = 1765951849705
+/Users/M.Almutawa/Desktop/tabula-java/target/generated-sources/annotations = 1767606276867
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/constant-values.html = 1767606373657
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/tag-search-index.js = 1767606377798
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/overview-tree.html = 1767606376580
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/module-search-index.js = 1767606377609
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/index.html = 1767606376741
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/package-search-index.js = 1767606377621
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/jquery-ui.overrides.css = 1767606379268
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/serialized-form.html = 1767606374065
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/index-all.html = 1767606378805
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/allpackages-index.html = 1767606377601
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/deprecated-list.html = 1767606376704
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/member-search-index.js = 1767606377796
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/script.js = 1767606379020
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/stylesheet.css = 1767606379016
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/overview-summary.html = 1767606378903
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/help-doc.html = 1767606379004
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/element-list = 1767606372101
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/allclasses-index.html = 1767606377591
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/type-search-index.js = 1767606377771
+/Users/M.Almutawa/Desktop/tabula-java/target/apidocs/search.js = 1767606379045
