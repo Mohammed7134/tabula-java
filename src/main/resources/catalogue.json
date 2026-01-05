@@ -14974,5 +14974,29 @@
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "10",
     "MAXIMUM": ""
+  },
+  {
+    "NO.": "1250",
+    "ITEMNO": "6505020232321",
+    "ITEMDESC": "AZTREONAM 1GM                     10VIL",
+    "PACK": "10",
+    "UNIT": "PKT",
+    "IGNORE": "FALSE",
+    "CARTON": "10",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "72",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1251",
+    "ITEMNO": "6505020232322",
+    "ITEMDESC": "AZTREONAM 1GM                     1VIL",
+    "PACK": "1",
+    "UNIT": "PKT",
+    "IGNORE": "FALSE",
+    "CARTON": "10",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "72",
+    "MAXIMUM": ""
   }
 ]
