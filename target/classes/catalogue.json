@@ -9638,7 +9638,7 @@
   {
     "NO.": "804",
     "ITEMNO": "6505020209342",
-    "ITEMDESC": "PIPERACIL+TAZOBACTAM SOD.4.5GM(SANDOZ)10VIL",
+    "ITEMDESC": "PIPERACIL+TAZOBAC SOD.4.5GM(SANDOZ)10VIL",
     "PACK": "10",
     "UNIT": "BND",
     "IGNORE": "FALSE",
@@ -14978,7 +14978,7 @@
   {
     "NO.": "1249",
     "ITEMNO": "6505020206461",
-    "ITEMDESC": "HUMAN NOR IMM GLOB 5GM/50M I.V (PRIVIGEN)",
+    "ITEMDESC": "HUMAN NOR IMM GLOB 5GM/50M I.V (PRIVIGE",
     "PACK": "20",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
@@ -15009,18 +15009,6 @@
     "CARTON": "10",
     "ALTERNATIVE": "TRUE",
     "MINIMUM": "72",
-    "MAXIMUM": ""
-  },
-  {
-    "NO.": "1252",
-    "ITEMNO": "6505020206461",
-    "ITEMDESC": "HUMAN NOR IMM GLOB 5GM/50ML I.V (PRIVIGE",
-    "PACK": "20",
-    "UNIT": "PKT",
-    "IGNORE": "FALSE",
-    "CARTON": "10",
-    "ALTERNATIVE": "TRUE",
-    "MINIMUM": "65",
     "MAXIMUM": ""
   }
 ]
