@@ -4850,7 +4850,7 @@
   {
     "NO.": "405",
     "ITEMNO": "6505020204821",
-    "ITEMDESC": "FACTOR 8 CONC.(BIOTEST)1000 I.U.PUFD 1 V",
+    "ITEMDESC": "FACTOR 8 CONC(BAYER) 1000 IU PUFD 1 VIL",
     "PACK": "1",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
@@ -12866,7 +12866,7 @@
   {
     "NO.": "1073",
     "ITEMNO": "6505020303161",
-    "ITEMDESC": "CALCIUM  FOLINATE 1000MG",
+    "ITEMDESC": "CALCIUM  LEUCOVORIN 1000MG",
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
@@ -13082,7 +13082,7 @@
   {
     "NO.": "1091",
     "ITEMNO": "6505020304625",
-    "ITEMDESC": "EPIRUBICIN (FARMARUBICIN)CS 50MG",
+    "ITEMDESC": "EPIRUBICIN (COLD) 50MG",
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
@@ -15034,5 +15034,29 @@
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "10",
     "MAXIMUM": ""
+  },
+  {
+    "NO.": "1254",
+    "ITEMNO": "6505020201561",
+    "ITEMDESC": "LUMASIRAN (OXLUMO) 94.5MG/0.5ML   1 VIL",
+    "PACK": "1",
+    "UNIT": "VIL",
+    "IGNORE": "TRUE",
+    "CARTON": "1",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1120",
+    "ITEMNO": "6505020307233",
+    "ITEMDESC": "RITUXIMAB (RUXIENCE) 500MG-50ML",
+    "PACK": "1",
+    "UNIT": "VIL",
+    "IGNORE": "TRUE",
+    "CARTON": "1",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "0",
+    "MAXIMUM": "0"
   }
 ]
