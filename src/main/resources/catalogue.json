@@ -15053,10 +15053,34 @@
     "ITEMDESC": "RITUXIMAB (RUXIENCE) 500MG-50ML",
     "PACK": "1",
     "UNIT": "VIL",
+    "IGNORE": "FALSE",
+    "CARTON": "1",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1121",
+    "ITEMNO": "6505020200711",
+    "ITEMDESC": "HORMONE SOMATROGON 24MG (NGENLA) 1PEN",
+    "PACK": "1",
+    "UNIT": "PEN",
+    "IGNORE": "FALSE",
+    "CARTON": "1",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "5",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1122",
+    "ITEMNO": "6505020200741",
+    "ITEMDESC": "HORMONE SOMATROGON 60MG (NGENLA) 1PEN",
+    "PACK": "1",
+    "UNIT": "PEN",
     "IGNORE": "TRUE",
     "CARTON": "1",
     "ALTERNATIVE": "FALSE",
-    "MINIMUM": "0",
-    "MAXIMUM": "0"
+    "MINIMUM": "5",
+    "MAXIMUM": ""
   }
 ]
