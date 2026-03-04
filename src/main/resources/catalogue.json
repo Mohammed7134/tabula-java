@@ -15082,5 +15082,29 @@
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "5",
     "MAXIMUM": ""
+  },
+  {
+    "NO.": "1123",
+    "ITEMNO": "65050200342",
+    "ITEMDESC": "ULTOMIRIS (RAVULIZUMAB) 300MG/30ML  1VIL",
+    "PACK": "1",
+    "UNIT": "VIAL",
+    "IGNORE": "TRUE",
+    "CARTON": "1",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1124",
+    "ITEMNO": "65050202000341",
+    "ITEMDESC": "ULTOMIRIS(RAVULIZUMAB) 100MG/ML",
+    "PACK": "1",
+    "UNIT": "VIAL",
+    "IGNORE": "TRUE",
+    "CARTON": "1",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "",
+    "MAXIMUM": ""
   }
 ]
