@@ -15118,5 +15118,17 @@
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "",
     "MAXIMUM": ""
+  },
+  {
+    "NO.": "1126",
+    "ITEMNO": "6505020298761",
+    "ITEMDESC": "BRIVARACETAM (BRIVIACT) 50MG/ML 10 VIL",
+    "PACK": "10",
+    "UNIT": "VIL",
+    "IGNORE": "FALSE",
+    "CARTON": "10",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "50",
+    "MAXIMUM": "500"
   }
 ]
