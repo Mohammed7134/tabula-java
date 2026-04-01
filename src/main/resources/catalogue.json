@@ -834,7 +834,7 @@
     "PACK": "10",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "100",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "118",
     "MAXIMUM": ""
@@ -846,7 +846,7 @@
     "PACK": "10",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "100",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "118",
     "MAXIMUM": ""
@@ -1326,7 +1326,7 @@
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
-    "CARTON": "1",
+    "CARTON": "100",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "118",
     "MAXIMUM": ""
@@ -1866,7 +1866,7 @@
     "PACK": "5",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "4",
+    "CARTON": "50",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "62",
     "MAXIMUM": ""
@@ -2034,7 +2034,7 @@
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
-    "CARTON": "96",
+    "CARTON": "800",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "270",
     "MAXIMUM": ""
@@ -2046,7 +2046,7 @@
     "PACK": "240",
     "UNIT": "CRT",
     "IGNORE": "FALSE",
-    "CARTON": "96",
+    "CARTON": "800",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "270",
     "MAXIMUM": ""
@@ -2058,7 +2058,7 @@
     "PACK": "10",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "96",
+    "CARTON": "800",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "270",
     "MAXIMUM": ""
@@ -2634,7 +2634,7 @@
     "PACK": "5",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "50",
+    "CARTON": "330",
     "ALTERNATIVE": "TRUE",
     "MINIMUM": "157",
     "MAXIMUM": ""
@@ -2646,7 +2646,7 @@
     "PACK": "5",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "50",
+    "CARTON": "330",
     "ALTERNATIVE": "TRUE",
     "MINIMUM": "157",
     "MAXIMUM": ""
@@ -2730,7 +2730,7 @@
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
-    "CARTON": "108",
+    "CARTON": "400",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "131",
     "MAXIMUM": ""
@@ -3042,7 +3042,7 @@
     "PACK": "10",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "450",
+    "CARTON": "150",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "193",
     "MAXIMUM": ""
@@ -6054,7 +6054,7 @@
     "PACK": "1",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "20",
     "ALTERNATIVE": "TRUE",
     "MINIMUM": "65",
     "MAXIMUM": ""
@@ -6066,7 +6066,7 @@
     "PACK": "10",
     "UNIT": "CRT",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "20",
     "ALTERNATIVE": "TRUE",
     "MINIMUM": "65",
     "MAXIMUM": ""
@@ -6078,7 +6078,7 @@
     "PACK": "10",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "105",
     "ALTERNATIVE": "TRUE",
     "MINIMUM": "52",
     "MAXIMUM": ""
@@ -6090,7 +6090,7 @@
     "PACK": "10",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "105",
     "ALTERNATIVE": "TRUE",
     "MINIMUM": "52",
     "MAXIMUM": ""
@@ -6102,7 +6102,7 @@
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "105",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "52",
     "MAXIMUM": ""
@@ -6621,7 +6621,7 @@
     "CARTON": "240",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "406",
-    "MAXIMUM": "1920"
+    "MAXIMUM": "3840"
   },
   {
     "NO.": "553",
@@ -6633,7 +6633,7 @@
     "CARTON": "240",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "406",
-    "MAXIMUM": "1920"
+    "MAXIMUM": "3840"
   },
   {
     "NO.": "554",
@@ -6681,7 +6681,7 @@
     "CARTON": "200",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "378",
-    "MAXIMUM": "2000"
+    "MAXIMUM": "4000"
   },
   {
     "NO.": "558",
@@ -6693,7 +6693,7 @@
     "CARTON": "200",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "378",
-    "MAXIMUM": "2000"
+    "MAXIMUM": "4000"
   },
   {
     "NO.": "559",
@@ -6741,7 +6741,7 @@
     "CARTON": "200",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "378",
-    "MAXIMUM": "2000"
+    "MAXIMUM": "4000"
   },
   {
     "NO.": "563",
@@ -7701,7 +7701,7 @@
     "CARTON": "160",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "378",
-    "MAXIMUM": "2000"
+    "MAXIMUM": "4000"
   },
   {
     "NO.": "643",
@@ -7713,7 +7713,7 @@
     "CARTON": "5",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "378",
-    "MAXIMUM": "2000"
+    "MAXIMUM": "4000"
   },
   {
     "NO.": "644",
@@ -8058,7 +8058,7 @@
     "PACK": "1",
     "UNIT": "PFS",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "240",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "28",
     "MAXIMUM": ""
@@ -8082,7 +8082,7 @@
     "PACK": "1",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "240",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "11",
     "MAXIMUM": ""
@@ -8094,7 +8094,7 @@
     "PACK": "5",
     "UNIT": "BOX",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "240",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "11",
     "MAXIMUM": ""
@@ -8106,7 +8106,7 @@
     "PACK": "1",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "240",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "16",
     "MAXIMUM": ""
@@ -8118,7 +8118,7 @@
     "PACK": "5",
     "UNIT": "BOX",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "240",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "16",
     "MAXIMUM": ""
@@ -8202,7 +8202,7 @@
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "240",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "99",
     "MAXIMUM": ""
@@ -8214,7 +8214,7 @@
     "PACK": "10",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "10",
+    "CARTON": "240",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "99",
     "MAXIMUM": ""
@@ -8853,7 +8853,7 @@
     "CARTON": "300",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "1445",
-    "MAXIMUM": "7200"
+    "MAXIMUM": "12000"
   },
   {
     "NO.": "739",
@@ -8865,7 +8865,7 @@
     "CARTON": "300",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "1445",
-    "MAXIMUM": "7200"
+    "MAXIMUM": "12000"
   },
   {
     "NO.": "740",
@@ -9018,7 +9018,7 @@
     "PACK": "5",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "270",
+    "CARTON": "875",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "713",
     "MAXIMUM": ""
@@ -9030,7 +9030,7 @@
     "PACK": "1",
     "UNIT": "AMP",
     "IGNORE": "FALSE",
-    "CARTON": "270",
+    "CARTON": "875",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "713",
     "MAXIMUM": ""
@@ -9042,7 +9042,7 @@
     "PACK": "5",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "270",
+    "CARTON": "875",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "713",
     "MAXIMUM": ""
@@ -9054,7 +9054,7 @@
     "PACK": "18",
     "UNIT": "BND",
     "IGNORE": "FALSE",
-    "CARTON": "270",
+    "CARTON": "875",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "713",
     "MAXIMUM": ""
@@ -9078,7 +9078,7 @@
     "PACK": "5",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "270",
+    "CARTON": "875",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "713",
     "MAXIMUM": ""
@@ -9090,7 +9090,7 @@
     "PACK": "50",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "270",
+    "CARTON": "875",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "713",
     "MAXIMUM": ""
@@ -9630,7 +9630,7 @@
     "PACK": "120",
     "UNIT": "CRT",
     "IGNORE": "FALSE",
-    "CARTON": "1200",
+    "CARTON": "98",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "1114",
     "MAXIMUM": ""
@@ -9642,7 +9642,7 @@
     "PACK": "10",
     "UNIT": "BND",
     "IGNORE": "FALSE",
-    "CARTON": "1200",
+    "CARTON": "98",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "1114",
     "MAXIMUM": ""
@@ -9654,7 +9654,7 @@
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
-    "CARTON": "1200",
+    "CARTON": "98",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "1114",
     "MAXIMUM": ""
@@ -9666,7 +9666,7 @@
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
-    "CARTON": "1200",
+    "CARTON": "98",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "1114",
     "MAXIMUM": ""
@@ -11514,7 +11514,7 @@
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
-    "CARTON": "1",
+    "CARTON": "168",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "30",
     "MAXIMUM": ""
@@ -11946,7 +11946,7 @@
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
-    "CARTON": "630",
+    "CARTON": "600",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "357",
     "MAXIMUM": ""
@@ -11958,7 +11958,7 @@
     "PACK": "10",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "630",
+    "CARTON": "600",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "357",
     "MAXIMUM": ""
@@ -12354,7 +12354,7 @@
     "PACK": "1",
     "UNIT": "AMP",
     "IGNORE": "FALSE",
-    "CARTON": "25",
+    "CARTON": "825",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "540",
     "MAXIMUM": ""
@@ -12366,7 +12366,7 @@
     "PACK": "5",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "25",
+    "CARTON": "825",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "540",
     "MAXIMUM": ""
@@ -12378,7 +12378,7 @@
     "PACK": "3",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "25",
+    "CARTON": "825",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "540",
     "MAXIMUM": ""
@@ -12390,7 +12390,7 @@
     "PACK": "25",
     "UNIT": "BND",
     "IGNORE": "FALSE",
-    "CARTON": "25",
+    "CARTON": "825",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "540",
     "MAXIMUM": ""
@@ -12402,7 +12402,7 @@
     "PACK": "50",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "50",
+    "CARTON": "825",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "540",
     "MAXIMUM": ""
@@ -12414,7 +12414,7 @@
     "PACK": "5",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "25",
+    "CARTON": "825",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "540",
     "MAXIMUM": ""
