@@ -69,7 +69,7 @@ public class TalabiyaProcessor {
                     item.setEXPIRY(m.getExpiry());
                     LocalDate expiryDate = parseDate(item.getEXPIRY());
                     double difference = m.getDifference();
-                    System.out.println("Processing item: " + item.getITEMNO() + ", difference: " + difference);
+                    // System.out.println("Processing item: " + item.getITEMNO() + ", difference: " + difference);
                     if (difference < 0) {
                         int total = 0;
                         if ((parseDoubleSafe(item.getCARTON())/packSize) % 1 == 0) {
@@ -231,7 +231,7 @@ public class TalabiyaProcessor {
     private static String formatCode(String code) {
         if (specialCodes.contains(code)) {
             code = code.replaceFirst("6505-99", "6505-02").replace("-", "");
-            System.out.println("ITEMNO: " + code + " is a special code, formatted to: " + code);
+            // System.out.println("ITEMNO: " + code + " is a special code, formatted to: " + code);
 
         } else {
             code = code.replaceFirst("6505-99", "6505-02").replace("-", "");

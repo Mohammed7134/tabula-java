@@ -48,7 +48,8 @@ public class DetailedParser {
                         .anyMatch(cell -> cell.getText().toLowerCase().contains("return order"));
                 boolean hasOut = row.stream()
                         .anyMatch(cell -> cell.getText().contains("OUT")); // case-sensitive
-
+                boolean hasStrategic = row.stream()
+                        .anyMatch(cell -> cell.getText().toLowerCase().contains("strategic"));
                 if (hasReturnOrder && hasOut) {
                     double quantity = 0.0;
                     String code = "";
@@ -57,6 +58,8 @@ public class DetailedParser {
                     for (RectangularTextContainer cell : row) {
                         String text = cell.getText();
                         String lowerText = text.toLowerCase();
+                        //log text 
+                        System.out.println("Cell Text: " + text);
                         int pos = lowerText.indexOf("return order");
                         if (pos != -1) {
                             String afterText = text.substring(pos + "return order".length()).trim();
@@ -105,6 +108,64 @@ public class DetailedParser {
                             return v;
                         });
                     }
+                    //log code and quantity for return order
+                    System.out.println("Return Order - Code: " + code + ", Quantity: " + quantity);
+                } else if (hasStrategic && hasOut) { 
+
+                    double quantity = 0.0;
+                    String code = "";
+                    double currentCell = 0;
+                    // Extract quantity after "supply order"
+                    for (RectangularTextContainer cell : row) {
+                        String text = cell.getText();
+                        //log text 
+                        System.out.println("Cell Text: " + text);
+                        currentCell++;
+                        if (currentCell == 4) {
+                            try {
+                                    quantity = Double.parseDouble(cell.getText().trim());
+                                } catch (NumberFormatException e) {
+                                    quantity = 0.0;
+                                }
+                        }
+                    }
+
+                    // Look backwards to find nearest "Item:" cell
+                    for (int j = i - 1; j >= 0; j--) {
+                        List<RectangularTextContainer> prevRow = allRows.get(j);
+                        boolean found = false;
+                        for (RectangularTextContainer cell : prevRow) {
+                            String cellText = cell.getText().trim();
+                            String lowerCellText = cellText.toLowerCase();
+                            if (lowerCellText.startsWith("item:")) {
+                                int start = lowerCellText.indexOf("item:") + 5;
+                                int end = lowerCellText.indexOf("current stock:");
+                                if (end == -1) {
+                                    end = cellText.length();
+                                }
+                                code = cellText.substring(start, end).trim();
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (found) {
+                            break;
+                        }
+                    }
+
+                    // Add or accumulate
+                    if (!code.isEmpty() && quantity != 0) {
+                        double finalQuantity = quantity;
+                        resultMap.compute(code, (k, v) -> {
+                            if (v == null) {
+                                return new ReturnedItem(k, finalQuantity);
+                            }
+                            v.setQuantity(v.getQuantity() + finalQuantity);
+                            return v;
+                        });
+                    }
+                    //log code and quantity for strategic supply order
+                        System.out.println("Strategic Supply Order - Code: " + code + ", Quantity: " + quantity);
                 }
             }
         }

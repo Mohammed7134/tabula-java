@@ -8346,7 +8346,7 @@
     "PACK": "20",
     "UNIT": "CRT",
     "IGNORE": "FALSE",
-    "CARTON": "20",
+    "CARTON": "1000",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "738",
     "MAXIMUM": ""
@@ -8358,7 +8358,7 @@
     "PACK": "1",
     "UNIT": "VIL",
     "IGNORE": "FALSE",
-    "CARTON": "20",
+    "CARTON": "1000",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "738",
     "MAXIMUM": ""
@@ -8370,7 +8370,7 @@
     "PACK": "10",
     "UNIT": "PKT",
     "IGNORE": "FALSE",
-    "CARTON": "20",
+    "CARTON": "1000",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "738",
     "MAXIMUM": ""
@@ -8382,7 +8382,7 @@
     "PACK": "50",
     "UNIT": "CRT",
     "IGNORE": "FALSE",
-    "CARTON": "50",
+    "CARTON": "1000",
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "738",
     "MAXIMUM": ""
@@ -15130,5 +15130,17 @@
     "ALTERNATIVE": "TRUE",
     "MINIMUM": "50",
     "MAXIMUM": "500"
+  },
+  {
+    "NO.": "1127",
+    "ITEMNO": "6505020200181",
+    "ITEMDESC": "HYDRALAZINE 20MG (RUBIO)     5 AMP",
+    "PACK": "5",
+    "UNIT": "PKT",
+    "IGNORE": "FALSE",
+    "CARTON": "5",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "64",
+    "MAXIMUM": ""
   }
 ]
