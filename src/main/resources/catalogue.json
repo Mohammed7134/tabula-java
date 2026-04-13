@@ -15142,5 +15142,29 @@
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "64",
     "MAXIMUM": ""
+  },
+  {
+    "NO.": "1128",
+    "ITEMNO": "6505020307232",
+    "ITEMDESC": "RITUXIMAB 500MG-50ML (SANDOZ)",
+    "PACK": "1",
+    "UNIT": "PKT",
+    "IGNORE": "TRUE",
+    "CARTON": "1",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1129",
+    "ITEMNO": "6505020204441",
+    "ITEMDESC": "SUXAMETHONIM CHLORIDE 10MG/ML 10ML 10PFS",
+    "PACK": "10",
+    "UNIT": "PKT",
+    "IGNORE": "FALSE",
+    "CARTON": "10",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "100",
+    "MAXIMUM": ""
   }
 ]
