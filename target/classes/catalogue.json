@@ -15130,5 +15130,29 @@
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "",
     "MAXIMUM": ""
+  },
+  {
+    "NO.": "1131",
+    "ITEMNO": "6505020307224",
+    "ITEMDESC": "RITUXIMAB 100MG-10ML (SANDOZ)",
+    "PACK": "2",
+    "UNIT": "VIL",
+    "IGNORE": "TRUE",
+    "CARTON": "2",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "",
+    "MAXIMUM": ""
+  },
+  {
+    "NO.": "1132",
+    "ITEMNO": "6505020207711",
+    "ITEMDESC": "ROPIVICAINE (ZITAMIN) 75MG/10ML 5 AMP",
+    "PACK": "5",
+    "UNIT": "VIL",
+    "IGNORE": "FALSE",
+    "CARTON": "5",
+    "ALTERNATIVE": "TRUE",
+    "MINIMUM": "",
+    "MAXIMUM": ""
   }
 ]
