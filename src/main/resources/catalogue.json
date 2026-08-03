@@ -15406,5 +15406,17 @@
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "",
     "MAXIMUM": ""
+  },
+  {
+    "NO": "1154",
+    "ITEMNO": "6505020299031",
+    "ITEMDESC": "ENZ. PEGVALIASE (PALYNZIQ) 10MG",
+    "PACK": "1",
+    "UNIT": "PKT",
+    "IGNORE": "TRUE",
+    "CARTON": "1",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "0",
+    "MAXIMUM": "0"
   }
 ]
