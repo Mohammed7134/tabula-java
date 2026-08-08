@@ -79,7 +79,7 @@
             <!-- Correct Java version for Spring Boot 3 -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.14.1</version>
                 <configuration>
                     <release>17</release>
                 </configuration>
