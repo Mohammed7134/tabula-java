@@ -15418,5 +15418,17 @@
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "0",
     "MAXIMUM": "0"
+  },
+  {
+    "NO": "1155",
+    "ITEMNO": "6505020200691",
+    "ITEMDESC": "OCRELIZUMAB (OCREVUS) 920MG/23ML",
+    "PACK": "1",
+    "UNIT": "VIL",
+    "IGNORE": "TRUE",
+    "CARTON": "1",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "0",
+    "MAXIMUM": "0"
   }
 ]
