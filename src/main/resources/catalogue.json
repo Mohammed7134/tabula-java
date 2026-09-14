@@ -15477,5 +15477,17 @@
     "ALTERNATIVE": "FALSE",
     "MINIMUM": "0",
     "MAXIMUM": "0"
+  },
+  {
+    "NO.": "1160",
+    "ITEMNO": "6505020201131",
+    "ITEMDESC": "HYQVIA 30GM/300ML   1 VIAL",
+    "PACK": "1",
+    "UNIT": "VIL",
+    "IGNORE": "FALSE",
+    "CARTON": "1",
+    "ALTERNATIVE": "FALSE",
+    "MINIMUM": "0",
+    "MAXIMUM": "0"
   }
 ]
