@@ -31,6 +31,7 @@ public class CatalogueItem {
     private String NOTE;
     private double STOCK;
     private double MOVEMENT;
+    private double STRATEGIC = 0.0;
     // getters and setters
     public String getITEMNO() { return ITEMNO; }
     public void setITEMNO(String ITEMNO) { this.ITEMNO = ITEMNO; }
@@ -71,6 +72,10 @@ public class CatalogueItem {
 
     public double getMOVEMENT() { return MOVEMENT; }
     public void setMOVEMENT(double MOVEMENT) { this.MOVEMENT = MOVEMENT; }
+
+    // new property which is quantity in strategic list and default it to zero
+    public double getSTRATEGIC() { return STRATEGIC; }
+    public void setSTRATEGIC(double STRATEGIC) { this.STRATEGIC = STRATEGIC; }
 
     @Override
     public String toString() {

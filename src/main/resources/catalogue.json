@@ -2390,13 +2390,13 @@
   {
     "NO.": "200",
     "ITEMNO": "6505020206581",
-    "ITEMDESC": "CETRORELIX (CETROTIDE) 0.25MG      1 PFS",
+    "ITEMDESC": "LHRH ANTAG 0.25MG (ORGALUTRAN) 1 PFS",
     "PACK": "1",
     "UNIT": "SYR",
     "IGNORE": "FALSE",
-    "CARTON": "1",
+    "CARTON": "10",
     "ALTERNATIVE": "FALSE",
-    "MINIMUM": "6",
+    "MINIMUM": "10",
     "MAXIMUM": ""
   },
   {

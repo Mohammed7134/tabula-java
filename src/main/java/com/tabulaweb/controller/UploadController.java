@@ -35,10 +35,12 @@ public class UploadController {
             @RequestParam("expiries") MultipartFile expiries,
             @RequestParam("detailed") MultipartFile detailed,
             @RequestParam("brief") MultipartFile brief,
+            @RequestParam(value = "strategic") MultipartFile strategic,
             @RequestParam(value = "requested", required = false) MultipartFile requested,
             @RequestParam(value = "urgent", required = false) boolean urgent
     ) throws Exception {
         List<Expiry> expiryList = ExpiryParser.parseExpiries(expiries.getInputStream());
+        List<Expiry> strategicList = ExpiryParser.parseExpiries(strategic.getInputStream());
         List<ReturnedItem> returnedItems = DetailedParser.parseDetailed(detailed.getInputStream());
         List<briefItem> briefItems = briefParser.parsebrief(brief.getInputStream());
         briefItems = DeductReturned.deductReturnedMedicines(returnedItems, briefItems);
@@ -46,10 +48,10 @@ public class UploadController {
         StringBuilder html = new StringBuilder();
         List<CatalogueItem> catalogueItems;
         if (requested == null || requested.isEmpty()) {
-                catalogueItems = TalabiyaProcessor.writeTalabiya(briefItems, expiryList, urgent);
+                catalogueItems = TalabiyaProcessor.writeTalabiya(briefItems, expiryList, strategicList, urgent);
         } else {
                 List<RequestedItem> requestedItems = RequestedParser.parseRequested(requested.getInputStream());
-                catalogueItems = TalabiyaChecker.checkTalabiya(briefItems, expiryList, requestedItems);
+                catalogueItems = TalabiyaChecker.checkTalabiya(briefItems, expiryList, strategicList, requestedItems);
         }
                 System.out.println("Processed " + catalogueItems.size() + " catalogue items.");
                 if(!urgent) {
@@ -58,7 +60,7 @@ public class UploadController {
                         // ===== THEAD =====
                         html.append("<thead>");
                         html.append("<tr>");
-                        String[] headers = {"STORE", "ITEMNO", "ITEMDESC", "EXPIRY", "PACK", "TOTAL", "NOTE"};
+                        String[] headers = {"STORE", "ITEMNO", "ITEMDESC", "EXPIRY", "PACK", "TOTAL", "NOTE", "STRATEGIC"};
                         for (String header : headers) {
                                 html.append("<th");
                                 if ("PACK".equals(header)) {
@@ -93,8 +95,14 @@ public class UploadController {
                         html.append("<td>").append(item.getITEMDESC() != null ? item.getITEMDESC() : "").append("</td>");
                         html.append("<td").append(!sortable.isEmpty() ? " data-order='" + sortable + "'" : "").append(">").append(display != null ? display : "").append("</td>");
                         html.append("<td style='padding:0 2rem;'>").append(item.getPACK() != null ? item.getPACK() : "").append("</td>");
-                        html.append("<td>").append(item.getTOTAL() != null ? item.getTOTAL() : "").append("</td>");
+                        // if note is [NE] then highlight the total cell in gray
+                        if (item.getNOTE() != null && item.getNOTE().equals("[NE]")) {
+                                html.append("<td style='background-color: gray;'>").append(item.getTOTAL() != null ? item.getTOTAL() : "").append("</td>");
+                        } else {
+                                html.append("<td>").append(item.getTOTAL() != null ? item.getTOTAL() : "").append("</td>");
+                        }
                         html.append("<td>").append(item.getNOTE() != null ? item.getNOTE() : "").append("</td>");
+                        html.append("<td>").append(String.valueOf(item.getSTRATEGIC())).append("</td>");
                         html.append("</tr>");
                         }
                         html.append("</tbody>");
@@ -107,7 +115,7 @@ public class UploadController {
                         // ===== THEAD =====
                         html.append("<thead>");
                         html.append("<tr>");
-                        String[] headers = {"ITEMNO", "ITEMDESC", "EXPIRY", "STOCK", "MINIMUM", "MOVED", "ALTERNATIVE?", "TOTAL", "NOTE"};
+                        String[] headers = {"ITEMNO", "ITEMDESC", "EXPIRY", "STOCK", "MINIMUM", "MOVED", "ALTERNATIVE?", "TOTAL", "NOTE", "STRATEGIC"};
                         for (String header : headers) {
                                 html.append("<th");
                                 html.append(">").append(header).append("</th>");
@@ -139,6 +147,7 @@ public class UploadController {
                                 html.append("<td>").append(item.getALTERNATIVE() != null ? item.getALTERNATIVE() : "").append("</td>");
                                 html.append("<td>").append(item.getTOTAL() != null ? item.getTOTAL() : "").append("</td>");
                                 html.append("<td>").append(item.getNOTE() != null ? item.getNOTE() : "").append("</td>");
+                                html.append("<td>").append(String.valueOf(item.getSTRATEGIC())).append("</td>");
                                 html.append("</tr>");
                         }
                         html.append("</tbody>");

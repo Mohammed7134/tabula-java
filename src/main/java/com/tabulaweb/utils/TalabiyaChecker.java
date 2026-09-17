@@ -27,7 +27,7 @@ public class TalabiyaChecker {
         "6505020205571", "6505020205572", "6505020205591",
         "6505020206545", "6505020208062", "6505020208065"
     );
-        public static List<CatalogueItem> checkTalabiya(List<briefItem> briefItems, List<Expiry> expiries, List<RequestedItem> requestedItems) {
+        public static List<CatalogueItem> checkTalabiya(List<briefItem> briefItems, List<Expiry> expiries, List<Expiry> strategicList, List<RequestedItem> requestedItems) {
             // Load catalogue items from JSON
             // This assumes CatalogueLoader.loadCatalogueFromJson() returns a List<CatalogueItem>
             List<CatalogueItem> catalogueItems = CatalogueLoader.loadCatalogueFromJson();

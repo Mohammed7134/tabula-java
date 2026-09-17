@@ -20,7 +20,7 @@ public class TalabiyaProcessor {
             "6505-99-02-05571", "6505-99-02-05572", "6505-99-02-05591", "6505-99-02-06545", "6505-99-02-08062", "6505-99-02-08065"
     );
 
-    public static List<CatalogueItem> writeTalabiya(List<briefItem> briefItems, List<Expiry> expiries, boolean urgent) {
+    public static List<CatalogueItem> writeTalabiya(List<briefItem> briefItems, List<Expiry> expiries, List<Expiry> strategicList, boolean urgent) {
         // Load catalogue items from JSON
         // This assumes CatalogueLoader.loadCatalogueFromJson() returns a List<CatalogueItem>
         List<CatalogueItem> catalogueItems = CatalogueLoader.loadCatalogueFromJson();
@@ -34,7 +34,41 @@ public class TalabiyaProcessor {
             System.out.println("No catalogue items found.");
             return List.of();
         }
-        // Process each brief item
+        // Process each brief item and match it with catalogue items
+        // and do same with the strategic list and set the expiry date for the catalogue items
+        for (Expiry m : strategicList) {
+            // Process strategic items matching with catalogue items and set the expiry date
+            String code = m.getCode();
+            String finalCode = formatCode(code);
+            if (finalCode != null
+                    && finalCode.matches("\\d{12,13}") // must be 12 or 13 digits
+                    && finalCode.startsWith("6505")) {
+                List<CatalogueItem> matchingItems;
+                // Filter catalogue items based on ITEMNO
+                matchingItems = catalogueItems.stream()
+                        .filter(c -> {
+                            if (c.getITEMNO() == null) {
+                                return false; // skip null ITEMNO
+                            }
+                            String itemCode = c.getITEMNO();
+                            return itemCode.contains(finalCode);
+                        })
+                        .sorted(Comparator.comparingDouble((CatalogueItem c) -> parseDoubleSafe(c.getPACK())).reversed())
+                        .collect(Collectors.toList());
+                if (matchingItems.isEmpty()) {
+                    System.out.println("No match found for strategic item with code: " + code);
+                    continue;
+                }
+                for (CatalogueItem item : matchingItems) {
+                    // item.setEXPIRY(UpdateExpiryDate.convertDateFormat(m.getDate()));
+                    item.setSTRATEGIC(m.getQuantity());
+                    // item.setTOTAL("-----");
+                    // item.setNOTE("[NM]");
+                }
+            } else {
+                System.out.println("Invalid code format for strategic item: " + code);
+            }
+        }
         for (briefItem m : briefItems) {
             String code = m.getCode();
             String finalCode = formatCode(code);
@@ -105,9 +139,26 @@ public class TalabiyaProcessor {
                                 item.setNOTE("[UF]");
                             }
                         } else {
-                            item.setTOTAL("[........]");
-                            item.setNOTE("[NE]");
-                            m.setDone(true);
+                            if (urgent) {
+                                item.setTOTAL("[........]");
+                                item.setNOTE("[NE]");
+                                m.setDone(true);
+                            } else {
+                                if (total >= 3) {
+                                    if (m.getCurrentStock()/(m.getTotalOut()/4) < 0.9) {
+                                        item.setTOTAL(String.valueOf((int) Math.round(((m.getTotalOut()/4) - m.getCurrentStock())/packSize)));
+                                        System.out.println("total already set to " + total + " for item: " + item.getITEMNO());
+                                        item.setNOTE("[NE]");
+                                        m.setDone(true);
+                                    } else {
+                                        item.setTOTAL("-----");
+                                        item.setNOTE("[NN]");
+                                    }
+                                } else {
+                                    item.setTOTAL("-----");
+                                    item.setNOTE("[UF]");
+                                }
+                            }
                         }
                     } else {
                         item.setTOTAL("-----");
@@ -131,6 +182,7 @@ public class TalabiyaProcessor {
                             .findFirst()
                             .orElse(null);
                     if (expiry != null) {
+                        item.setSTOCK(expiry.getQuantity());
                         item.setEXPIRY(UpdateExpiryDate.convertDateFormat(expiry.getDate()));
                         item.setTOTAL("-----");
                         item.setNOTE("[NM]");
