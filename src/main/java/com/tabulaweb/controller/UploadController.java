@@ -102,7 +102,8 @@ public class UploadController {
                                 html.append("<td>").append(item.getTOTAL() != null ? item.getTOTAL() : "").append("</td>");
                         }
                         html.append("<td>").append(item.getNOTE() != null ? item.getNOTE() : "").append("</td>");
-                        html.append("<td>").append(String.valueOf(item.getSTRATEGIC())).append("</td>");
+                        //print the STRATEGIC value as a string, not as a boolean and without decimal places
+                        html.append("<td>").append(String.valueOf((long) item.getSTRATEGIC())).append("</td>");
                         html.append("</tr>");
                         }
                         html.append("</tbody>");
@@ -147,7 +148,7 @@ public class UploadController {
                                 html.append("<td>").append(item.getALTERNATIVE() != null ? item.getALTERNATIVE() : "").append("</td>");
                                 html.append("<td>").append(item.getTOTAL() != null ? item.getTOTAL() : "").append("</td>");
                                 html.append("<td>").append(item.getNOTE() != null ? item.getNOTE() : "").append("</td>");
-                                html.append("<td>").append(String.valueOf(item.getSTRATEGIC())).append("</td>");
+                                html.append("<td>").append(String.valueOf((long) item.getSTRATEGIC())).append("</td>");
                                 html.append("</tr>");
                         }
                         html.append("</tbody>");
