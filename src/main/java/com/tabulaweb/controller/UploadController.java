@@ -35,7 +35,7 @@ public class UploadController {
             @RequestParam("expiries") MultipartFile expiries,
             @RequestParam("detailed") MultipartFile detailed,
             @RequestParam("brief") MultipartFile brief,
-            @RequestParam(value = "strategic") MultipartFile strategic,
+            @RequestParam("strategic") MultipartFile strategic,
             @RequestParam(value = "requested", required = false) MultipartFile requested,
             @RequestParam(value = "urgent", required = false) boolean urgent
     ) throws Exception {
@@ -60,7 +60,7 @@ public class UploadController {
                         // ===== THEAD =====
                         html.append("<thead>");
                         html.append("<tr>");
-                        String[] headers = {"STORE", "ITEMNO", "ITEMDESC", "EXPIRY", "PACK", "TOTAL", "NOTE", "STRATEGIC"};
+                        String[] headers = {"ITEMNO", "ITEMDESC", "EXPIRY", "PACK", "TOTAL", "NOTE", "STRGC"};
                         for (String header : headers) {
                                 html.append("<th");
                                 if ("PACK".equals(header)) {
@@ -90,7 +90,7 @@ public class UploadController {
                         }
 
                         html.append("<tr>");
-                        html.append("<td>").append(store).append("</td>");
+                        // html.append("<td>").append(store).append("</td>");
                         html.append("<td>").append(item.getITEMNO() != null ? item.getITEMNO() : "").append("</td>");
                         html.append("<td>").append(item.getITEMDESC() != null ? item.getITEMDESC() : "").append("</td>");
                         html.append("<td").append(!sortable.isEmpty() ? " data-order='" + sortable + "'" : "").append(">").append(display != null ? display : "").append("</td>");

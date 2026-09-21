@@ -32,28 +32,29 @@ public class UploadPDFController {
             @RequestParam("pdf") MultipartFile pdf
     ) throws Exception {
         try (PDDocument document = Loader.loadPDF(RandomAccessReadBuffer.createBufferFromStream(pdf.getInputStream()))) {
-            ObjectExtractor extractor = new ObjectExtractor(document);
-            PageIterator pageIterator = extractor.extract();
-            SpreadsheetExtractionAlgorithm algo = new SpreadsheetExtractionAlgorithm();
-            while (pageIterator.hasNext()) {
-                Page page = pageIterator.next();
-                List<Table> tables = algo.extract(page);
-                
-                for (Table table : tables) {
-                    for (List<RectangularTextContainer> row : table.getRows()) {
-                        if (row.size() < 4) {
-                            continue;  // We expect at least 6 columns
-                        }
-                        try {
-                            String code = row.get(0).getText().trim();
-                            String name = row.get(1).getText().trim();
-                            double HIS = parseDoubleSafe(row.get(2).getText().trim());
-                            double SMS = parseDoubleSafe(row.get(3).getText().trim());
+            try (ObjectExtractor extractor = new ObjectExtractor(document)) {
+                PageIterator pageIterator = extractor.extract();
+                SpreadsheetExtractionAlgorithm algo = new SpreadsheetExtractionAlgorithm();
+                while (pageIterator.hasNext()) {
+                    Page page = pageIterator.next();
+                    List<Table> tables = algo.extract(page);
+                    
+                    for (Table table : tables) {
+                        for (List<RectangularTextContainer> row : table.getRows()) {
+                            if (row.size() < 4) {
+                                continue;  // We expect at least 6 columns
+                            }
+                            try {
+                                String code = row.get(0).getText().trim();
+                                String name = row.get(1).getText().trim();
+                                double HIS = parseDoubleSafe(row.get(2).getText().trim());
+                                double SMS = parseDoubleSafe(row.get(3).getText().trim());
 
-                            System.out.println(code + "   " + name + "   " + HIS + "   " + SMS + "   ");
+                                System.out.println(code + "   " + name + "   " + HIS + "   " + SMS + "   ");
 
-                        } catch (NumberFormatException | NullPointerException e) {
-                            // skip rows that cannot be parsed correctly
+                            } catch (NumberFormatException | NullPointerException e) {
+                                // skip rows that cannot be parsed correctly
+                            }
                         }
                     }
                 }
