@@ -124,7 +124,7 @@ public class TalabiyaProcessor {
                             item.setNOTE("[DN]");
                             continue;
                         }
-                        if (expiryDate != null && expiryDate.isAfter(LocalDate.now().plusMonths(6))) {
+                        if (expiryDate != null && expiryDate.isAfter(LocalDate.now().plusMonths(1).withDayOfMonth(1).plusMonths(6))) {
                             if (total >= 3) {
                                 if (m.getCurrentStock()/m.getTotalOut() < 0.9) {
                                     item.setTOTAL(String.valueOf(total));
@@ -145,15 +145,22 @@ public class TalabiyaProcessor {
                                 m.setDone(true);
                             } else {
                                 if (total >= 3) {
-                                    if (m.getCurrentStock()/(m.getTotalOut()/4) < 0.9) {
-                                        item.setTOTAL(String.valueOf((int) Math.round(((m.getTotalOut()/4) - m.getCurrentStock())/packSize)));
-                                        System.out.println("total already set to " + total + " for item: " + item.getITEMNO());
-                                        item.setNOTE("[NE]");
-                                        m.setDone(true);
-                                    } else {
-                                        item.setTOTAL("-----");
-                                        item.setNOTE("[NN]");
-                                    }
+                                        if (m.getCurrentStock()/(m.getTotalOut()/4) < 0.9) {
+                                            if (expiryDate != null && expiryDate.isAfter(LocalDate.now().plusMonths(1).withDayOfMonth(1).plusMonths(1))) {
+                                                item.setTOTAL("[........]");
+                                                item.setNOTE("[NE]");
+                                                m.setDone(true);
+                                            } else {
+                                                item.setTOTAL(String.valueOf((int) Math.round(((m.getTotalOut()/4) - m.getCurrentStock())/packSize)));
+                                                System.out.println("total already set to " + total + " for item: " + item.getITEMNO());
+                                                item.setNOTE("[NE]");
+                                                m.setDone(true);
+                                            }
+                                        } else {
+                                            item.setTOTAL("-----");
+                                            item.setNOTE("[NN]");
+                                        }
+                                    
                                 } else {
                                     item.setTOTAL("-----");
                                     item.setNOTE("[UF]");
