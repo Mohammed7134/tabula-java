@@ -145,13 +145,13 @@ public class TalabiyaProcessor {
                                 m.setDone(true);
                             } else {
                                 if (total >= 3) {
-                                        if (m.getCurrentStock()/(m.getTotalOut()/4) < 0.9) {
-                                            if (expiryDate != null && expiryDate.isAfter(LocalDate.now().plusMonths(1).withDayOfMonth(1).plusMonths(1))) {
+                                        if (m.getCurrentStock()/(m.getTotalOut()/3) < 0.9) {
+                                            if (expiryDate != null && expiryDate.isAfter(LocalDate.now().withDayOfMonth(31).plusMonths(2))) {
                                                 item.setTOTAL("[........]");
                                                 item.setNOTE("[NE]");
                                                 m.setDone(true);
                                             } else {
-                                                item.setTOTAL(String.valueOf((int) Math.round(((m.getTotalOut()/4) - m.getCurrentStock())/packSize)));
+                                                item.setTOTAL(String.valueOf((int) Math.round(((m.getTotalOut()/3) - m.getCurrentStock())/packSize)));
                                                 System.out.println("total already set to " + total + " for item: " + item.getITEMNO());
                                                 item.setNOTE("[NE]");
                                                 m.setDone(true);
