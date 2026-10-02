@@ -146,7 +146,7 @@ public class TalabiyaProcessor {
                             } else {
                                 if (total >= 3) {
                                         if (m.getCurrentStock()/(m.getTotalOut()/3) < 0.9) {
-                                            if (expiryDate != null && expiryDate.isAfter(LocalDate.now().withDayOfMonth(31).plusMonths(2))) {
+                                            if (expiryDate != null && expiryDate.isBefore(LocalDate.now().withDayOfMonth(31).plusMonths(2)) && expiryDate.isAfter(LocalDate.now().withDayOfMonth(31))) {
                                                 item.setTOTAL("[........]");
                                                 item.setNOTE("[NE]");
                                                 m.setDone(true);
